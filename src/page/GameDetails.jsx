@@ -4,9 +4,13 @@ import { Link } from 'react-router-dom'
 
 
 import 'bootstrap/dist/css/bootstrap.min.css';
+import ReusableModal from '../components/ReusableModal';
 
 
 const GameDetails = () => {
+    const [modalType, setModalType] = useState(null);
+
+
     const [previewImage, setPreviewImage] = useState(null);
 
     const handleFileChange = (e) => {
@@ -16,6 +20,13 @@ const GameDetails = () => {
             const imageUrl = URL.createObjectURL(file);
             setPreviewImage(imageUrl);
         }
+    };
+    const handleOpen = (type) => setModalType(type);
+    const handleClose = () => setModalType(null);
+
+    const handleSubmit = (data) => {
+        alert(`Submitted: ${data}`);
+        handleClose();
     };
     return (
         <>
@@ -132,164 +143,18 @@ const GameDetails = () => {
                     </div>
 
                     <div className="match-buttons">
-                        <button data-bs-toggle="modal"
-                            data-bs-target="#WonShowModal" className="won yellow-btn btn-lg">I WON</button>
-                        <button data-bs-toggle="modal"
-                            data-bs-target="#lostWonShowModal" className="lost yellow-btn delete-btn btn-lg">I LOST</button>
-                        <button data-bs-toggle="modal"
-                            data-bs-target="#cancelShowModal" className="cancel yellow-btn cancel-btn btn-lg">CANCEL</button>
+                        <button onClick={() => handleOpen('won')} className="won yellow-btn btn-lg">I WON</button>
+                        <button onClick={() => handleOpen('lost')} className="lost yellow-btn delete-btn btn-lg">I LOST</button>
+                        <button onClick={() => handleOpen('cancel')} className="cancel yellow-btn cancel-btn btn-lg">CANCEL</button>
                     </div>
                 </div>
 
-                <div
-                    className="modal fade"
-                    id="WonShowModal"
-                    tabIndex={-1}
-                    aria-labelledby="WonShowModalLabel"
-                    aria-hidden="true"
-                >
-                    <div className="modal-dialog modal-dialog-centered">
-                        <div className="modal-content">
-                            <button
-                                type="button"
-                                className="btn-close modal-close-btn"
-                                data-bs-dismiss="modal"
-                                aria-label="Close"
-                            />
-                            <div className="modal-body">
-                            <h4 className="font-26">Upload Result</h4>
-                                <div className="upload-file-section">
-                                    <label className="upload-file-button">
-                                        <div>
-                                            <svg width="33" height="24" viewBox="0 0 33 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                                <path d="M25.5037 23.6414H18.6381V16.704H20.907C21.4824 16.704 21.8224 16.0501 21.4824 15.5793L17.0689 9.47226C16.7877 9.07994 16.2058 9.07994 15.9246 9.47226L11.511 15.5793C11.171 16.0501 11.5045 16.704 12.0864 16.704H14.3553V23.6414H6.66592C3.23314 23.4518 0.5 20.2414 0.5 16.7628C0.5 14.3631 1.80119 12.2708 3.73008 11.1396C3.55353 10.6623 3.46199 10.1523 3.46199 9.61611C3.46199 7.16412 5.4432 5.18292 7.89518 5.18292C8.42481 5.18292 8.93482 5.27446 9.41214 5.45101C10.831 2.44324 13.8911 0.357422 17.4481 0.357422C22.0513 0.36396 25.8437 3.88828 26.2752 8.38031C29.8126 8.9884 32.5 12.2642 32.5 15.9716C32.5 19.934 29.4138 23.3668 25.5037 23.6414Z" fill="black" />
-                                            </svg>
-
-                                        </div>
-                                        <div> Upload File</div>
-
-                                        <input
-                                            type="file"
-                                            accept="image/*"  // Only accept image files
-                                            onChange={handleFileChange}
-                                            style={{ display: 'none' }}
-                                        />
-                                    </label>
-                                    {previewImage && (
-                                        <div className="image-preview">
-                                            <img
-                                                src={previewImage}
-                                                alt="Preview"
-                                                className="preview-image"
-                                            />
-                                        </div>
-                                    )}
-                                </div>
-
-                                <button type='button' className='yellow-btn btn-lg w-100' > Post Submit </button>
-
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div
-                    className="modal fade"
-                    id="lostWonShowModal"
-                    tabIndex={-1}
-                    aria-labelledby="lostShowModalLabel"
-                    aria-hidden="true"
-                >
-                    <div className="modal-dialog modal-dialog-centered">
-                        <div className="modal-content">
-                            <button
-                                type="button"
-                                className="btn-close modal-close-btn"
-                                data-bs-dismiss="modal"
-                                aria-label="Close"
-                            />
-                            <div className="modal-body">
-                                <div className="max-300">
-                                    <p className='info-text text-center'>
-                                        <div>Are you sure you Lost this game?</div>
-                                        <div>क्या आप निश्चित हैं कि आप यह गेम हार गए हैं?</div>
-                                    </p>
-                                </div>
-
-                                <div className="checkbox-section">
-                                    <input type="checkbox" class="ui-checkbox"></input>
-                                    <span>Yes, I Confirm*</span>
-                                </div>
-
-
-                                <button type='button' className='yellow-btn delete-btn mb-3 btn-lg w-100' > Yes, I lost </button>
-                                <button type='button' className='yellow-btn btn-lg w-100' > No </button>
-
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div
-                    className="modal fade"
-                    id="cancelShowModal"
-                    tabIndex={-1}
-                    aria-labelledby="cancelShowModal"
-                    aria-hidden="true"
-                >
-                    <div className="modal-dialog modal-dialog-centered">
-                        <div className="modal-content">
-                            <button
-                                type="button"
-                                className="btn-close modal-close-btn"
-                                data-bs-dismiss="modal"
-                                aria-label="Close"
-                            />
-                            <div className="modal-body">
-                                <div className="tetx-center">
-                                    <h4 className='modal-heading'> We would like to know more
-                                    </h4>
-                                    <p className='info-text text-center'>
-                                        Select Reason for cancelling
-                                    </p>
-                                </div>
-                                <div className="reason-section my-form">
-                                    <div className="reason-box">
-                                        <input checked="" id="radio-2" type="radio" name="option" />
-                                        <label htmlFor="radio-2">No Room Code</label>
-                                    </div>
-                                    <div className="reason-box">
-                                        <input checked="" id="radio-3" type="radio" name="option" />
-                                        <label htmlFor="radio-3">Not joined</label>
-                                    </div>
-                                    <div className="reason-box">
-                                        <input checked="" id="radio-4" type="radio" name="option" />
-                                        <label htmlFor="radio-4">Not Playing</label>
-                                    </div>
-                                    <div className="reason-box">
-                                        <input checked="" id="radio-5" type="radio" name="option" />
-                                        <label htmlFor="radio-5">Dont Want to Play</label>
-                                    </div>
-                                    <div className="reason-box">
-                                        <input checked="" id="radio-6" type="radio" name="option" />
-                                        <label htmlFor="radio-6">Opponent Abusing</label>
-                                    </div>
-                                    <div className="reason-box">
-                                        <input checked="" id="radio-7" type="radio" name="option" />
-                                        <label htmlFor="radio-7">Game not Started</label>
-                                    </div>
-                                    <div className="reason-box">
-                                        <input checked="" id="radio-8" type="radio" name="option" />
-                                        <label htmlFor="radio-8">Others</label>
-                                    </div>
-
-                                </div>
-                                <button type='button' className='yellow-btn btn-lg w-100' > Submit </button>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
+                <ReusableModal
+                isOpen={!!modalType}
+                onClose={handleClose}
+                onSubmit={handleSubmit}
+                type={modalType}
+            />
             </Layout>
         </>
     )

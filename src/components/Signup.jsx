@@ -33,7 +33,7 @@ const Signup = () => {
                         <p className="form-info">Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
                         <input type="text" className="form-control" placeholder="+91 123 456 7890" />
                         <input type="text" className="form-control mt-3" placeholder="Enter Code" />
-
+                        <button type="submit" className="btn theme-btn ResendOtp mt-26">Resend otp</button>
                         <button type="submit" className="btn theme-btn mt-26">Continue</button>
                     </form>
                     <div className="mt-4">

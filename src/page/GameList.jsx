@@ -6,9 +6,9 @@ const GameList = () => {
     return (
         <Layout>
             <div className="game-list-container">
-                <div className="EntryAmount">
-                    <div>
-                        <img src="/wallet-icon.png" alt="" /><span className="">    ENTRY AMOUNT</span></div>
+                <div className="EntryAmountBox">
+                    <input className='EntryAmount' placeholder='ENTRY AMOUNT' type="text" />
+                    <img src="/wallet-icon.png" className='wallet-i' alt="" />
                     <button className="yellow-btn btn-lg">SET</button>
                 </div>
                 <div className="battle-heading">

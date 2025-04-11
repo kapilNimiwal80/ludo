@@ -651,8 +651,15 @@ h6 {
   flex-wrap: wrap;
 }
 
-.modal-body {
-  padding: 26px 22px 56px;
+.modal-body,
+.ReactModal__Content {
+  padding: 26px 22px 56px !important;
+  overflow: unset !important;
+  border: 0 !important;
+}
+
+.ReactModal__Overlay {
+  background: rgb(0 0 0 / 60%) !important;
 }
 
 .modal-close-btn {
@@ -801,8 +808,8 @@ h6 {
 /* From Uiverse.io by cbolson */
 .my-form {
   --_clr-primary: #666;
-  --_clr-hover: #FFEE41;
-  --_clr-checked: #127acf;
+  --_clr-hover: #127acf;
+  --_clr-checked: #FFEE41;
 }
 
 .my-form>div {
@@ -877,6 +884,11 @@ h6 {
   scale: 1;
 }
 
+.my-form input[type="radio"]:checked {
+  border: 1px solid var(--_clr-current);
+}
+
+
 .reason-section {
   display: flex;
   flex-wrap: wrap;
@@ -912,6 +924,55 @@ h6 {
   max-height: 250px;
   object-fit: contain;
 }
-.modal-dialog-centered{
+
+.modal-dialog-centered {
   justify-content: center;
+}
+
+
+.ResendOtp {
+  display: block;
+  margin-top: 10px;
+  text-align: left;
+  color: #000;
+  background: #48B6E1 !important;
+  margin-top: 16px;
+}
+
+.EntryAmount {
+  background: rgb(255, 29, 42);
+  background: linear-gradient(242deg, rgba(255, 29, 42, 1) 0%, rgba(255, 80, 90, 1) 100%);
+  padding: 8px;
+  padding-left: 24px;
+  border-radius: 30px;
+  display: flex;
+  align-items: center;
+  margin-block: 26px;
+  justify-content: space-between;
+  height: 60px;
+  width: 100%;
+  border: 0;
+  padding-left: 65px;
+  outline: 0;
+  padding-right: 128px;
+}
+
+.EntryAmountBox {
+  position: relative;
+}
+
+.EntryAmount::placeholder {
+  color: #fff;
+}
+
+.wallet-i {
+  position: absolute;
+  top: 14px;
+  left: 20px;
+}
+
+.EntryAmountBox .yellow-btn {
+  position: absolute;
+  right: 4px;
+  top: 4px;
 }
