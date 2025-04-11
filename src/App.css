@@ -1,0 +1,917 @@
+.left-panel {
+  width: 460px;
+  background-size: contain;
+  padding-bottom: 320px !important;
+  padding: 48px 68px 0 !important;
+  flex: 0 0 459px;
+  text-align: center;
+}
+
+.board-img {
+  width: 100%;
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  top: 0;
+  width: 460px;
+  user-select: none;
+  z-index: -1;
+  object-fit: cover;
+  height: 100%;
+}
+
+body {
+  overflow: hidden;
+  font-family: "Nunito", sans-serif;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Luckiest Guy", sans-serif;
+}
+
+.right-panel {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex: 1;
+  border-left: 10px solid #CFECF7;
+}
+
+.left-panel>img {
+  height: 123px;
+  margin-bottom: 30px !important;
+}
+
+::selection {
+  background-color: #E7232E;
+  color: #fff;
+}
+
+.form-heading {
+  font-size: 32px;
+  margin-bottom: 16px;
+  font-weight: 400;
+  color: #fff;
+  text-align: center;
+}
+
+.form-info {
+  font-size: 16px;
+  margin-bottom: 46px;
+  text-align: center;
+  color: #fff;
+}
+
+.form-control {
+  height: 52px;
+  padding: 16px;
+  font-size: 16px;
+  color: #9D7575;
+  border-radius: 40px;
+  box-shadow: none !important;
+  outline: none !important;
+}
+
+
+.btn.theme-btn {
+  background: #FFEE41;
+  width: 100%;
+  height: 52px;
+  border-radius: 40px;
+  font-size: 16px;
+  font-weight: 400;
+  font-family: "Luckiest Guy", sans-serif;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 18px;
+}
+
+.btn.theme-btn:hover {
+  background: #48B6E1;
+}
+
+.mt-26 {
+  margin-top: 26px;
+}
+
+.topbar {
+  background: linear-gradient(180deg, #76B82A 0%, #E7232E 100%);
+  border: 0;
+}
+
+.humburger-btn {
+  border: 0;
+  background: transparent;
+}
+
+.logo .dash-logo {
+  height: 54px;
+}
+
+.topbar {
+  display: flex;
+  align-items: center;
+  padding: 22px;
+  border-radius: 0 0 26px 26px;
+}
+
+.status-btn {
+  border: 2px solid #76B82A;
+  background: #E7232E;
+  padding: 4px;
+  border-radius: 20px;
+  font-size: 12px;
+  font-weight: 400;
+  font-family: "Nunito", sans-serif;
+  color: #fff;
+  padding-left: 20px;
+  position: relative;
+  font-family: "Luckiest Guy", sans-serif;
+}
+
+.status-btn svg {
+  margin-left: 6px;
+}
+
+.status-btn img {
+  position: absolute;
+  left: 0;
+}
+
+.status-btn img {
+  position: absolute;
+  left: -14px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.coin-btn {
+  margin-left: 14px;
+}
+
+.status-btn.coin-btn img {
+  left: -9px;
+}
+
+.sidebar {
+  flex: 0 0 480px;
+}
+
+.main-content {
+  flex: 1;
+}
+
+.dashboard {
+  height: 100dvh;
+}
+
+.sidebar {
+  display: grid;
+  grid-template-rows: 80px 1fr auto;
+  position: relative;
+}
+
+.game-cards {
+  display: flex;
+  /* grid-template-columns: 1fr 1fr; */
+  gap: 26px;
+  padding: 22px;
+  /* height: calc(100dvh - 168px); */
+  /* overflow: auto; */
+  align-content: flex-start;
+  flex-wrap: wrap;
+}
+
+.card-box {
+  background: url(./card-bg.png);
+  border-radius: 20px;
+  padding: 26px;
+  height: 205px;
+  width: 100%;
+  cursor: pointer;
+}
+
+.BottomSection {
+  padding: 0 22px;
+}
+
+.bottom-nav {
+  background: linear-gradient(180deg, #76B82A 0%, #E7232E 100%);
+  border-radius: 60px;
+  display: flex;
+  justify-content: space-between;
+  padding: 6px;
+}
+
+.nav-item {
+  text-align: center;
+  padding: 8px 28px;
+  font-family: "Luckiest Guy", sans-serif;
+  color: #fff;
+  font-size: 14px;
+  font-weight: 400;
+}
+
+.nav-item.active {
+  background-color: #FFEE41;
+  border-radius: 60px;
+  color: #000;
+}
+
+.nav-item svg {
+  margin-bottom: 4px;
+}
+
+.kyc-alertBox {
+  background-color: #fff;
+  padding: 0;
+  width: 100%;
+  grid-column: 1/-1;
+}
+
+.kyc-alert {
+  background: #E7232E;
+  padding: 6px 15px;
+  border-radius: 20px;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  gap: 9px;
+  width: 100%;
+}
+
+.navbar-nav .nav-link {
+  color: #000;
+  text-align: left;
+  padding: 0;
+}
+
+.navbar-nav .nav-link.active {
+  color: #E7232E;
+}
+
+.offcanvas-body .nav-item {
+  padding-left: 0;
+  font-size: 16px;
+}
+
+.sidebar .offcanvas-body {
+  padding-top: 0;
+}
+
+
+.left-panel {
+  position: relative;
+}
+
+.left-panel::after {
+  content: "";
+  position: absolute;
+  bottom: 287px;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: url(./ludo-board4.png) no-repeat center center;
+  background-size: cover;
+  z-index: 1;
+  user-select: none;
+  pointer-events: none;
+  display: none;
+}
+
+.left-panel::before {
+  pointer-events: none;
+  content: "";
+  position: absolute;
+  bottom: -20px;
+  left: 20px;
+  width: calc(100% - 40px);
+  height: 407px;
+  background: url(./ludo-board3.png);
+  background-size: contain;
+  z-index: 1;
+  background-repeat: no-repeat;
+  user-select: none;
+  display: none;
+}
+
+.left-panel form {
+  position: relative;
+  z-index: 1;
+}
+
+.min-vh-100 {
+  height: 100dvh !important;
+  min-height: 100dvh !important;
+}
+
+
+.sidebar .offcanvas {
+  height: 100dvh;
+  background: rgb(118, 184, 42);
+  background: linear-gradient(183deg, rgba(118, 184, 42, 1) 0%, rgba(231, 35, 46, 1) 100%);
+}
+
+.dash-logo {
+  height: 61px;
+}
+
+.offcanvas-header .btn-close {
+  background-color: #FFEE41 !important;
+  height: 38px;
+  width: 38px;
+  opacity: 1;
+  border-radius: 50%;
+  --bs-btn-close-bg: url('data:image/svg+xml,<svg width="17" height="17" viewBox="0 0 17 17" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M2.01575 16.09C1.82377 16.09 1.6078 15.982 1.36783 15.766C1.12786 15.5261 0.899888 15.2501 0.683915 14.9381C0.491939 14.6262 0.32396 14.3142 0.179978 14.0023C0.0599925 13.6663 0 13.3903 0 13.1744C0 12.7664 0.107987 12.3705 0.32396 11.9865C0.56393 11.6026 0.88789 11.2066 1.29584 10.7987C1.55981 10.5347 1.95576 10.1747 2.48369 9.71879C3.03562 9.23885 3.80353 8.60293 4.78741 7.81103L1.6198 2.87964C1.54781 2.75966 1.46382 2.61567 1.36783 2.4477C1.29584 2.27972 1.25984 2.14773 1.25984 2.05174C1.25984 1.97975 1.34383 1.83577 1.51181 1.6198C1.70379 1.37983 1.94376 1.15186 2.23172 0.935882C2.51969 0.695912 2.83165 0.479939 3.16761 0.287962C3.52756 0.0959873 3.88752 0 4.24747 0C4.51144 0 4.8114 0.059992 5.14736 0.179977C5.50732 0.275965 5.81928 0.527934 6.08325 0.935882C6.53919 1.65579 6.95914 2.31571 7.34309 2.91564C7.75104 3.51556 8.13499 4.10349 8.49494 4.67942L13.3183 0.539932C13.5343 0.347955 13.6903 0.215972 13.7863 0.143982C13.9063 0.0479939 14.0143 0 14.1102 0C14.2782 0 14.4822 0.131983 14.7222 0.39595C14.9621 0.63592 15.1781 0.923884 15.3701 1.25984C15.5861 1.5958 15.766 1.93176 15.91 2.26772C16.054 2.60368 16.126 2.86764 16.126 3.05962C16.126 3.46757 16.006 3.85152 15.766 4.21148C15.5501 4.57143 15.2621 4.93139 14.9022 5.29134C14.6382 5.55531 14.1942 5.95126 13.5703 6.4792C12.9704 7.00713 12.1305 7.71504 11.0506 8.60293C11.6746 9.58681 12.1905 10.4027 12.5984 11.0506C13.0304 11.6985 13.3663 12.2265 13.6063 12.6344C13.8703 13.0424 14.0503 13.3543 14.1462 13.5703C14.2422 13.7623 14.2902 13.8943 14.2902 13.9663C14.2902 14.1822 14.1702 14.4222 13.9303 14.6862C13.7143 14.9261 13.4503 15.1541 13.1384 15.3701C12.8264 15.5621 12.4904 15.73 12.1305 15.874C11.7945 16.018 11.5186 16.09 11.3026 16.09C11.0386 16.09 10.7147 16.03 10.3307 15.91C9.97076 15.766 9.6588 15.4781 9.39483 15.0461L7.30709 11.7705C6.61118 12.3705 5.86727 13.0064 5.07537 13.6783C4.28347 14.3502 3.43157 15.0701 2.51969 15.838C2.32771 16.006 2.15973 16.09 2.01575 16.09Z" fill="black"/></svg>');
+  background-position: 20px center;
+}
+
+.sideMenu-item {
+  padding: 13px 22px;
+  background: #fff;
+  margin-bottom: 16px;
+  border-radius: 30px;
+  font-family: "Luckiest Guy", sans-serif;
+}
+
+.subCatgegory {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.game-cards-inner {
+  grid-column: 1/ -1;
+  display: flex;
+  gap: 22px;
+  flex-wrap: wrap;
+}
+
+.FixCard-box img {
+  max-width: 100%;
+  width: 100%;
+}
+
+.EntryAmount {
+  background: rgb(255, 29, 42);
+  background: linear-gradient(242deg, rgba(255, 29, 42, 1) 0%, rgba(255, 80, 90, 1) 100%);
+  padding: 8px;
+  padding-left: 24px;
+  border-radius: 30px;
+  display: flex;
+  align-items: center;
+  margin-block: 26px;
+  justify-content: space-between;
+}
+
+.yellow-btn {
+  padding: 14px 42px;
+  border: 0;
+  background: #FFEE41;
+  border-radius: 40px;
+  font-size: 16px;
+  font-family: "Luckiest Guy", sans-serif;
+}
+
+.game-list-container {
+  padding: 0 22px;
+}
+
+
+.battle-heading {
+  display: flex;
+  justify-content: space-between;
+  gap: 15px;
+  margin-bottom: 24px;
+}
+
+.battleBox {
+  background: #F5F5F5;
+  padding: 10px 22px 22px;
+  border-radius: 22px;
+  margin-bottom: 16px;
+}
+
+.battle-text {
+  font-size: 14px;
+  font-family: "Luckiest Guy", sans-serif;
+}
+
+
+.battle-title {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+  margin-bottom: 10px;
+  border-bottom: 1px solid rgb(0 0 0 / 16%);
+  padding-bottom: 10px;
+}
+
+.battle-details {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.battle-Entry span,
+.battle-price span {
+  display: block;
+}
+
+.yellow-btn.btn-md {
+  padding: 6px 22px;
+  font-size: 14px;
+}
+
+.delete-btn {
+  color: #fff;
+  background-color: #E7232E;
+}
+
+.battleBox .yellow-btn {
+  max-width: 82px;
+  min-width: 82px;
+}
+
+.rules-link {
+  font-size: 20px;
+  color: #000;
+  font-family: "Luckiest Guy", sans-serif;
+}
+
+.mian-content {
+  height: calc(100dvh - 168px);
+  overflow: auto;
+  padding-bottom: 10px;
+}
+
+.EntryAmount {
+  font-family: "Luckiest Guy", sans-serif;
+  color: #fff;
+}
+
+.EntryAmount span {
+  margin-left: 16px;
+}
+
+.loaderBox svg {
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.battle-heading h2 svg {
+  margin-right: 10px;
+}
+
+.user-img {
+  height: 32px;
+  width: 32px;
+  border-radius: 50%;
+  overflow: hidden;
+}
+
+.user-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.top-bar {
+  display: flex;
+  padding: 29px 0 22px;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.back-link {
+  font-family: "Luckiest Guy", sans-serif;
+  font-size: 20px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: #000;
+}
+
+.room-code-box {
+  background: #F5F5F5;
+  border-radius: 22px;
+  padding: 16px 22px;
+  text-align: center;
+}
+
+.room-code {
+  margin-bottom: 22px;
+}
+
+.Waiting-code {
+  font-size: 16px;
+  margin-bottom: 0;
+}
+
+.waiting p {
+  color: rgb(39 39 39 / 80%);
+}
+
+.warning {
+  background: rgb(255, 29, 42);
+  background: linear-gradient(242deg, rgba(255, 29, 42, 1) 0%, rgba(255, 80, 90, 1) 100%);
+  padding: 11px 16px;
+  border-radius: 12px;
+  color: #fff;
+  margin-top: 22px;
+}
+
+.play-instruction {
+  text-align: center;
+  padding-bottom: 22px;
+  border-bottom: 1px solid rgb(0 0 0 / 16%);
+  margin-bottom: 16px;
+  margin-top: 26px;
+}
+
+.info-text {
+  color: rgb(39 39 39 / 80%);
+
+}
+
+.info-text.border-bottom {
+  padding-bottom: 22px;
+  border-bottom: 1px solid rgb(0 0 0 / 16%);
+  margin-bottom: 16px;
+}
+
+.font-20 {
+  font-size: 20px;
+  font-family: "Luckiest Guy", sans-serif;
+}
+
+.rules-list {
+  list-style: none;
+  padding-left: 0;
+}
+
+.match-buttons {
+  display: flex;
+  justify-content: space-between;
+  gap: 13px;
+}
+
+.cancel-btn {
+  border: 1px solid #E7232E;
+  color: #E7232E;
+  background: transparent;
+}
+
+.battleBox a.yellow-btn {
+  color: #000;
+}
+
+.match-buttons .yellow-btn {
+  flex: 1;
+}
+
+.room-code-copy {
+  margin-top: 16px;
+  margin-bottom: 26px;
+}
+
+.setCode {
+  margin: 26px auto;
+  max-width: 310px;
+  position: relative;
+}
+
+.setInput {
+  margin: auto;
+  width: 100%;
+  background: #fff;
+  border: 0;
+  padding: 14px 20px;
+  border-radius: 30px;
+  padding-right: 120px;
+  outline: 0;
+}
+
+.set-btn {
+  width: 112px;
+  position: absolute;
+  top: 0;
+  height: 52px;
+  border: 0;
+  background: #FFEE41;
+  border-radius: 0 30px 30px 0;
+  right: 0;
+  font-size: 16px;
+  font-family: "Luckiest Guy", sans-serif;
+}
+
+.RemainingTime strong {
+  font-size: 24px;
+  color: #4FB5EF;
+  font-weight: bold;
+  vertical-align: middle;
+}
+
+.room-code-copy {
+  margin-top: 16px;
+  margin-bottom: 26px;
+  align-items: center;
+  display: flex;
+  justify-content: space-between;
+}
+
+.room-code-copy .yellow-btn {
+  padding: 14px 18px;
+}
+
+.upload-file-section {
+  background: #F5F5F5;
+  padding: 27px;
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  margin-bottom: 50px;
+  border-radius: 22px;
+  flex-wrap: wrap;
+}
+
+.modal-body {
+  padding: 26px 22px 56px;
+}
+
+.modal-close-btn {
+  left: 50%;
+  z-index: 99;
+  position: absolute;
+  bottom: -18px;
+  width: 35px;
+  height: 35px;
+  background-color: #FFEE41;
+  opacity: 1;
+  transform: translateX(-50%);
+  --bs-btn-close-bg: url('data:image/svg+xml,<svg width="17" height="17" viewBox="0 0 17 17" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M2.01575 16.09C1.82377 16.09 1.6078 15.982 1.36783 15.766C1.12786 15.5261 0.899888 15.2501 0.683915 14.9381C0.491939 14.6262 0.32396 14.3142 0.179978 14.0023C0.0599925 13.6663 0 13.3903 0 13.1744C0 12.7664 0.107987 12.3705 0.32396 11.9865C0.56393 11.6026 0.88789 11.2066 1.29584 10.7987C1.55981 10.5347 1.95576 10.1747 2.48369 9.71879C3.03562 9.23885 3.80353 8.60293 4.78741 7.81103L1.6198 2.87964C1.54781 2.75966 1.46382 2.61567 1.36783 2.4477C1.29584 2.27972 1.25984 2.14773 1.25984 2.05174C1.25984 1.97975 1.34383 1.83577 1.51181 1.6198C1.70379 1.37983 1.94376 1.15186 2.23172 0.935882C2.51969 0.695912 2.83165 0.479939 3.16761 0.287962C3.52756 0.0959873 3.88752 0 4.24747 0C4.51144 0 4.8114 0.059992 5.14736 0.179977C5.50732 0.275965 5.81928 0.527934 6.08325 0.935882C6.53919 1.65579 6.95914 2.31571 7.34309 2.91564C7.75104 3.51556 8.13499 4.10349 8.49494 4.67942L13.3183 0.539932C13.5343 0.347955 13.6903 0.215972 13.7863 0.143982C13.9063 0.0479939 14.0143 0 14.1102 0C14.2782 0 14.4822 0.131983 14.7222 0.39595C14.9621 0.63592 15.1781 0.923884 15.3701 1.25984C15.5861 1.5958 15.766 1.93176 15.91 2.26772C16.054 2.60368 16.126 2.86764 16.126 3.05962C16.126 3.46757 16.006 3.85152 15.766 4.21148C15.5501 4.57143 15.2621 4.93139 14.9021 5.29134C14.6382 5.55531 14.1942 5.95126 13.5703 6.4792C12.9704 7.00713 12.1305 7.71504 11.0506 8.60293C11.6746 9.58681 12.1905 10.4027 12.5984 11.0506C13.0304 11.6985 13.3663 12.2265 13.6063 12.6344C13.8703 13.0424 14.0503 13.3543 14.1462 13.5703C14.2422 13.7623 14.2902 13.8943 14.2902 13.9663C14.2902 14.1822 14.1702 14.4222 13.9303 14.6862C13.7143 14.9261 13.4503 15.1541 13.1384 15.3701C12.8264 15.5621 12.4904 15.73 12.1305 15.874C11.7945 16.018 11.5186 16.09 11.3026 16.09C11.0386 16.09 10.7147 16.03 10.3307 15.91C9.97076 15.766 9.6588 15.4781 9.39483 15.0461L7.30709 11.7705C6.61118 12.3705 5.86727 13.0064 5.07537 13.6783C4.28347 14.3502 3.43157 15.0701 2.51969 15.838C2.32771 16.006 2.15973 16.09 2.01575 16.09Z" fill="black"/></svg>');
+  border-radius: 50%;
+}
+
+.FixCard-box {
+  flex: 1 1 calc(50% - 26px);
+  width: 100%;
+}
+
+/* From Uiverse.io by Galahhad */
+/* checkbox settings 👇 */
+
+.ui-checkbox {
+  --primary-color: #1677ff;
+  --secondary-color: #fff;
+  --primary-hover-color: #4096ff;
+  /* checkbox */
+  --checkbox-diameter: 20px;
+  --checkbox-border-radius: 5px;
+  --checkbox-border-color: #d9d9d9;
+  --checkbox-border-width: 1px;
+  --checkbox-border-style: solid;
+  /* checkmark */
+  --checkmark-size: 1.2;
+}
+
+.ui-checkbox,
+.ui-checkbox *,
+.ui-checkbox *::before,
+.ui-checkbox *::after {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+.ui-checkbox {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  width: var(--checkbox-diameter);
+  height: var(--checkbox-diameter);
+  border-radius: var(--checkbox-border-radius);
+  background: var(--secondary-color);
+  border: var(--checkbox-border-width) var(--checkbox-border-style) var(--checkbox-border-color);
+  -webkit-transition: all 0.3s;
+  -o-transition: all 0.3s;
+  transition: all 0.3s;
+  cursor: pointer;
+  position: relative;
+}
+
+.ui-checkbox::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  -webkit-box-shadow: 0 0 0 calc(var(--checkbox-diameter) / 2.5) var(--primary-color);
+  box-shadow: 0 0 0 calc(var(--checkbox-diameter) / 2.5) var(--primary-color);
+  border-radius: inherit;
+  opacity: 0;
+  -webkit-transition: all 0.5s cubic-bezier(0.12, 0.4, 0.29, 1.46);
+  -o-transition: all 0.5s cubic-bezier(0.12, 0.4, 0.29, 1.46);
+  transition: all 0.5s cubic-bezier(0.12, 0.4, 0.29, 1.46);
+}
+
+.ui-checkbox::before {
+  top: 40%;
+  left: 50%;
+  content: "";
+  position: absolute;
+  width: 4px;
+  height: 7px;
+  border-right: 2px solid var(--secondary-color);
+  border-bottom: 2px solid var(--secondary-color);
+  -webkit-transform: translate(-50%, -50%) rotate(45deg) scale(0);
+  -ms-transform: translate(-50%, -50%) rotate(45deg) scale(0);
+  transform: translate(-50%, -50%) rotate(45deg) scale(0);
+  opacity: 0;
+  -webkit-transition: all 0.1s cubic-bezier(0.71, -0.46, 0.88, 0.6), opacity 0.1s;
+  -o-transition: all 0.1s cubic-bezier(0.71, -0.46, 0.88, 0.6), opacity 0.1s;
+  transition: all 0.1s cubic-bezier(0.71, -0.46, 0.88, 0.6), opacity 0.1s;
+}
+
+/* actions */
+
+.ui-checkbox:hover {
+  border-color: var(--primary-color);
+}
+
+.ui-checkbox:checked {
+  background: var(--primary-color);
+  border-color: transparent;
+}
+
+.ui-checkbox:checked::before {
+  opacity: 1;
+  -webkit-transform: translate(-50%, -50%) rotate(45deg) scale(var(--checkmark-size));
+  -ms-transform: translate(-50%, -50%) rotate(45deg) scale(var(--checkmark-size));
+  transform: translate(-50%, -50%) rotate(45deg) scale(var(--checkmark-size));
+  -webkit-transition: all 0.2s cubic-bezier(0.12, 0.4, 0.29, 1.46) 0.1s;
+  -o-transition: all 0.2s cubic-bezier(0.12, 0.4, 0.29, 1.46) 0.1s;
+  transition: all 0.2s cubic-bezier(0.12, 0.4, 0.29, 1.46) 0.1s;
+}
+
+.ui-checkbox:active:not(:checked)::after {
+  -webkit-transition: none;
+  -o-transition: none;
+  -webkit-box-shadow: none;
+  box-shadow: none;
+  transition: none;
+  opacity: 1;
+}
+
+
+.checkbox-section {
+  display: flex;
+  gap: 5px;
+  justify-content: center;
+  margin-bottom: 36px;
+}
+
+.max-300 {
+  max-width: 300px;
+  margin: auto;
+}
+
+.modal-content {
+  border-radius: 22px;
+  max-width: 388px;
+}
+
+/* From Uiverse.io by cbolson */
+/* From Uiverse.io by cbolson */
+.my-form {
+  --_clr-primary: #666;
+  --_clr-hover: #FFEE41;
+  --_clr-checked: #127acf;
+}
+
+.my-form>div {
+  --_clr-current: var(--_clr-primary);
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.my-form>div+div {
+  margin-block-start: 0.5rem;
+}
+
+.my-form label {
+  cursor: pointer;
+  color: var(--_clr-current);
+  transition: color 150ms ease-in-out;
+}
+
+/* styled radio */
+.my-form input[type="radio"] {
+  appearance: none;
+  outline: none;
+  width: 1rem;
+  height: 1rem;
+  aspect-ratio: 1;
+  padding: 0.25rem;
+  background: transparent;
+  border: 1px solid var(--_clr-current);
+  border-radius: 50%;
+  display: grid;
+  place-content: center;
+  cursor: pointer;
+  position: relative;
+}
+
+.my-form input[type="radio"]::after {
+  content: "";
+  position: absolute;
+  inset: 0.10rem;
+  opacity: 0;
+  scale: 0;
+  transition:
+    opacity 150ms ease-in-out,
+    scale 150ms ease-in-out;
+  background-color: var(--_clr-checked);
+  border-radius: inherit;
+}
+
+.my-form label:hover,
+.my-form input[type="radio"]:focus-visible,
+.my-form input[type="radio"]:focus-visible+label,
+.my-form input[type="radio"]:hover,
+.my-form input[type="radio"]:hover+label {
+  --_clr-current: var(--_clr-hover);
+}
+
+.my-form input[type="radio"]:focus-visible::after,
+.my-form input[type="radio"]:hover::after {
+  opacity: 0.5;
+  scale: 1;
+  background-color: var(--_clr-hover);
+}
+
+.my-form input[type="radio"]:checked+label:not(:hover),
+.my-form input[type="radio"]:checked:not(:hover) {
+  --_clr-current: var(--_clr-checked);
+}
+
+.my-form input[type="radio"]:checked::after {
+  opacity: 1;
+  scale: 1;
+}
+
+.reason-section {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px 15px;
+  align-items: flex-start;
+  margin-bottom: 30px;
+}
+
+.reason-section .reason-box {
+  flex: 1 1 calc(50% - 15px);
+}
+
+.modal-heading {
+  font-size: 22px;
+  margin-bottom: 0;
+  text-align: center;
+  font-family: "Nunito", sans-serif;
+}
+
+.font-26 {
+  font-size: 26px;
+  margin-bottom: 26px;
+  text-align: center;
+}
+
+.image-preview {
+  flex: 1 1 100%;
+  width: 100%;
+}
+
+
+.preview-image {
+  max-height: 250px;
+  object-fit: contain;
+}
+.modal-dialog-centered{
+  justify-content: center;
+}

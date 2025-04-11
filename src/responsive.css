@@ -1,0 +1,204 @@
+@media (min-width: 1440.99px) and (max-width: 1600px) {}
+
+@media (min-width: 1200px) and (max-width: 1440.98px) {}
+
+@media (min-width: 1200px) and (max-width: 1309px) {}
+
+@media (min-width: 1200px) {}
+
+@media (max-width: 1199.98px) {
+  .big-logo {
+    height: 200px;
+  }
+}
+
+
+@media (min-width: 992px) {}
+
+@media (min-width: 992px) {}
+
+@media (max-width: 991.98px) {
+  .big-logo {
+    height: 150px;
+  }
+}
+
+@media (min-width: 768px) {}
+
+@media (min-width: 992px) and (max-width: 1199.98px) {}
+
+@media (min-width: 991px) and (max-width: 1199.98px) {}
+
+@media (min-width: 768px) and (max-width: 1199.98px) {}
+
+@media (min-width: 768px) and (max-width: 991.98px) {}
+
+
+
+@media (min-width: 768px) and (max-width: 991.98px) {}
+
+@media (max-width: 767.98px) {
+  .main-content.right-panel {
+    display: none;
+  }
+
+  .sidebar {
+    flex: 100%;
+  }
+}
+
+@media (min-width: 578px) and (max-width: 767.98px) {
+  .game-cards {
+    grid-template-columns: repeat(auto-fit, minmax(164px, 1fr));
+  }
+
+  .left-panel {
+    width: 320px;
+    padding-bottom: 320px !important;
+    padding: 48px 24px 0 !important;
+    flex: 0 0 320px;
+  }
+
+  .board-img {
+    width: 320px;
+  }
+}
+
+
+@media (max-width: 575.98px) {
+  .left-panel::before {
+    bottom: 20px;
+    bottom: calc(20px + env(safe-area-inset-bottom));
+    left: 50%;
+    width: 100%;
+    height: 336px;
+    transform: translateX(-50%);
+    max-width: 400px;
+  }
+
+  .left-panel::after {
+    bottom: 223px;
+  }
+
+  .nav-item {
+    padding: 8px 18px;
+    font-size: 11px;
+  }
+
+  .BottomSection {
+    padding: 0 16px;
+  }
+
+  .game-cards {
+    padding: 16px;
+  }
+
+  .game-cards-inner {
+    gap: 16px;
+  }
+
+  .game-cards {
+    grid-template-columns: repeat(auto-fit, minmax(164px, 1fr));
+    gap: 16px;
+  }
+
+  .nav-item span svg {
+    height: 20px;
+  }
+
+  .right-panel {
+    display: none;
+  }
+
+  .left-panel {
+    width: 100%;
+    height: 100dvh;
+    flex: 100%;
+    padding: 16px 24px 0 !important;
+  }
+
+  .board-img {
+    width: 100%;
+    height: 100%;
+  }
+
+  .form-info {
+    margin-bottom: 26px;
+  }
+
+  .left-panel>img {
+    height: 103px;
+  }
+
+  .left-panel>img {
+    margin-bottom: 24px !important;
+  }
+
+  .form-heading {
+    font-size: 28px;
+    margin-bottom: 6px;
+  }
+
+  .form-info {
+    font-size: 15px;
+  }
+
+  .dashboard {
+    padding-bottom: 100px;
+  }
+
+  .BottomSection {
+    background: #fff;
+    position: fixed;
+    bottom: 12px;
+    width: 100%;
+    padding-top: 12px;
+  }
+
+  .nav-item span {
+    display: block;
+  }
+
+  .game-cards .FixCard-box {
+    flex: 1 1 calc(50% - 16px);
+  }
+
+  .FixCard-box img {
+    max-width: 100%;
+    width: 100%;
+  }
+
+  .game-cards-inner {
+    width: 100%;
+  }
+}
+
+
+
+
+
+
+@media (max-width: 4000px) {
+  .RemainingTime strong {
+    font-size: 20px;
+  }
+
+  .match-buttons .yellow-btn {
+    padding: 10px;
+  }
+}
+
+@media (min-height: 955.99px) {
+  .left-panel {
+    max-height: 996px !important;
+  }
+
+  .right-panel {
+    max-height: 996px !important;
+  }
+
+  .board-img {
+    top: 0;
+    bottom: unset;
+  }
+}
