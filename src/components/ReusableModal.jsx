@@ -146,7 +146,7 @@ const ReusableModal = ({ isOpen, onClose, onSubmit, type }) => {
                     minWidth: '388px',
                     margin: 'auto',
                     padding: '20px',
-                    borderRadius: '10px',
+                    borderRadius: '22px',
                     inset: '50% auto auto 50%',
                     transform: 'translate(-50%, -50%)',
                 },

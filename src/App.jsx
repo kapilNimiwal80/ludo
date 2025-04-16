@@ -5,6 +5,8 @@ import Signup from './components/Signup'
 import Dashboard from './page/Dashboard'
 import GameList from './page/GameList'
 import GameDetails from './page/GameDetails'
+import MyProfile from './page/MyProfile'
+import MyWallet from './page/MyWallet'
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './App.css';
 import './responsive.css';
@@ -16,6 +18,8 @@ const App = () => {
       <Route path="/dashboard" element={<Dashboard />} />
       <Route path="/game-list" element={<GameList />} />
       <Route path="/game-detail" element={<GameDetails />} />
+      <Route path="/my-profile" element={<MyProfile />} />
+      <Route path="/my-wallet" element={<MyWallet />} />
     </Routes>
   )
 }

@@ -71,10 +71,13 @@ h6 {
   height: 52px;
   padding: 16px;
   font-size: 16px;
-  color: #9D7575;
+  color: #000;
   border-radius: 40px;
   box-shadow: none !important;
   outline: none !important;
+}
+.form-control::placeholder {
+  color: #9D7575;
 }
 
 
@@ -975,4 +978,135 @@ h6 {
   position: absolute;
   right: 4px;
   top: 4px;
+}
+
+.profile-mainBox {
+  padding: 30px 22px 0;
+}
+
+.page-title {
+  text-align: center;
+  margin-bottom: 26px;
+  font-size: 22px;
+}
+
+
+.profile-status {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+  list-style: none;
+  padding: 0;
+  margin-bottom: 16px;
+}
+
+.profile-card {
+  flex: 1 1 calc(50% - 16px);
+  padding: 24px 18px;
+  background: rgb(255 238 65 / 16%);
+  border-radius: 22px;
+  display: flex;
+  gap: 16px;
+  align-items: center;
+}
+
+.profile-icon {
+  flex-grow: 0;
+}
+
+.profile-card-value>* {
+  display: block;
+  font-family: "Luckiest Guy", sans-serif;
+  font-size: 16px;
+}
+.profile-card-value {
+  flex: 1;
+}
+.Wallet-link {
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+}
+
+.BattlePlayed {
+  background: rgb(255 85 33 / 16%);
+}
+.Referral {
+  background: rgb(141 189 73 / 16%);
+}
+.Wallet {
+  background: rgb(32 145 239 / 16%);
+}
+
+.profile-details-card {
+  border: 1px solid rgb(0 0 0 / 16%);
+  padding: 22px;
+  border-radius: 22px;
+  margin-bottom: 16px;
+}
+
+.card-label {
+  font-size: 16px;
+  font-family: "Luckiest Guy", sans-serif;
+}
+
+.info-row {
+  display: flex;
+  justify-content: space-between;
+  gap: 15px;
+  margin-bottom: 15px;
+}
+.card-value {
+  font-size: 16px;
+  color: rgb(39 39 39 / 80%);
+}
+.kyc-section {
+  background: #F5F5F5;
+  padding: 22px;
+  border-radius: 22px;
+  display: flex;
+  gap: 15px;
+  align-items: center;
+  justify-content: space-between;
+}
+.kyc-section .kyc-btn{
+  max-width: 154px;
+}
+.kyc-card-label {
+  display: flex;
+  font-family: "Luckiest Guy", sans-serif;
+  margin-bottom: 4px;
+}
+.kyc-pending {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+} 
+.whatsapp-icon {
+  padding: 35px 0 25px;
+}
+.whatsapp-icon a {
+  height: 54px;
+  width: 54px;
+  margin-left: auto;
+  background: #1BD741;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+}
+.form-group {
+  margin-bottom: 16px;
+}
+.save-changes{
+  margin-top: 26px;
+}
+
+.ChipsBox{
+  flex-wrap: wrap;
+}
+.chips-info{
+  padding-top: 16px;
+  margin-top: 4px;
+  border-top: 1px solid #000;
 }
