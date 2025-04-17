@@ -1272,3 +1272,6 @@ text-decoration: none;
 .bottom-nav > *:not(:last-child , .nav-item.active){
 border-right: 1px solid rgb(0 0 0 / 16%);
 }
+.nav-item span {
+  display: block;
+}
