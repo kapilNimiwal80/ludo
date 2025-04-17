@@ -1,9 +1,10 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 
 const Bottombar = () => {
   return (
     <div className="bottom-nav">
-      <div className="nav-item active"> <span>
+      <Link to="/dashboard" className="nav-item active"> <span>
         <svg
           width={24}
           height={24}
@@ -27,8 +28,8 @@ const Bottombar = () => {
             </clipPath>
           </defs>
         </svg>
-      </span>  <span>Home</span> </div>
-      <div className="nav-item"> <span>
+      </span>  <span>Home</span> </Link>
+      <Link to="/my-wallet" className="nav-item"> <span>
         <svg
           width={24}
           height={24}
@@ -58,93 +59,7 @@ const Bottombar = () => {
         </svg>
 
 
-      </span> <span>Wallet</span> </div>
-      <div className="nav-item"> <span>
-        <svg
-          width={24}
-          height={24}
-          viewBox="0 0 24 24"
-          fill="none"
-          xmlns="http://www.w3.org/2000/svg"
-        >
-          <g clipPath="url(#clip0_10_1501)">
-            <mask
-              id="mask0_10_1501"
-              style={{ maskType: "luminance" }}
-              maskUnits="userSpaceOnUse"
-              x={0}
-              y={0}
-              width={24}
-              height={24}
-            >
-              <path
-                d="M0.7 23.3V0.7H23.3V23.3H0.7Z"
-                fill="currentColor"
-                stroke="black"
-                strokeWidth="1.4"
-              />
-            </mask>
-            <g mask="url(#mask0_10_1501)">
-              <mask
-                id="mask1_10_1501"
-                style={{ maskType: "luminance" }}
-                maskUnits="userSpaceOnUse"
-                x={1}
-                y={1}
-                width={22}
-                height={22}
-              >
-                <path
-                  d="M22.2999 22.3V1.70007H1.7V22.3H22.2999Z"
-                  fill="currentColor"
-                  stroke="currentColor"
-                  strokeWidth="1.4"
-                />
-              </mask>
-              <g mask="url(#mask1_10_1501)">
-                <path
-                  d="M7.41675 7.41667C7.41675 4.88536 9.46878 2.83334 12.0001 2.83334C14.5314 2.83334 16.5834 4.88536 16.5834 7.41667C16.5834 9.94797 14.5314 12 12.0001 12C9.46878 12 7.41675 9.94797 7.41675 7.41667Z"
-                  stroke="currentColor"
-                  strokeWidth="1.6"
-                  strokeMiterlimit={10}
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                />
-                <path
-                  d="M10.515 21.1667H4.42C3.41007 21.1667 2.66163 20.2566 2.86748 19.2888C3.75267 15.1269 7.52112 12 12.0357 12C13.6861 12 15.2367 12.4179 16.5832 13.1514"
-                  stroke="currentColor"
-                  strokeWidth="1.6"
-                  strokeMiterlimit={10}
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                />
-                <path
-                  d="M19.3333 13.8334L20.8135 15.2846C21.2834 15.7452 21.2844 16.4931 20.8159 16.955L19.3333 18.4167"
-                  stroke="currentColor"
-                  strokeWidth="1.6"
-                  strokeMiterlimit={10}
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                />
-                <path
-                  d="M20.2501 16.5834H15.1915C13.9352 16.5834 12.9167 17.6093 12.9167 18.875C12.9167 20.1407 13.9168 21.1667 15.1732 21.1667"
-                  stroke="currentColor"
-                  strokeWidth="1.6"
-                  strokeMiterlimit={10}
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                />
-              </g>
-            </g>
-          </g>
-          <defs>
-            <clipPath id="clip0_10_1501">
-              <rect width={24} height={24} fill="currentColor" />
-            </clipPath>
-          </defs>
-        </svg>
-
-      </span> <span>Refer</span> </div>
+      </span> <span>Wallet</span> </Link>
       <div className="nav-item"> <span>
         <svg
           width={24}
@@ -154,7 +69,7 @@ const Bottombar = () => {
           xmlns="http://www.w3.org/2000/svg"
         >
           <mask
-            id="mask0_10_1448"
+            id="mask0_310_1575"
             style={{ maskType: "luminance" }}
             maskUnits="userSpaceOnUse"
             x={0}
@@ -162,36 +77,124 @@ const Bottombar = () => {
             width={24}
             height={24}
           >
-            <path d="M0 7.05719e-05H23.9999V24H0V7.05719e-05Z" fill="currentColor" />
+            <path
+              d="M0.7 23.3V0.7H23.3V23.3H0.7Z"
+              fill="white"
+              stroke="black"
+              strokeWidth="1.4"
+            />
           </mask>
-          <g mask="url(#mask0_10_1448)">
-            <path
-              d="M23.2968 12C23.2968 18.2391 18.239 23.2969 12 23.2969C5.76078 23.2969 0.703125 18.2391 0.703125 12C0.703125 5.76085 5.76078 0.703193 12 0.703193C18.239 0.703193 23.2968 5.76085 23.2968 12Z"
-              stroke="currentColor"
-              strokeWidth="1.6"
-              strokeMiterlimit={10}
-              strokeLinecap="round"
-              strokeLinejoin="round"
-            />
-            <path
-              d="M16.519 10.494C16.519 12.9896 14.4959 15.0127 12.0002 15.0127C9.50442 15.0127 7.48145 12.9896 7.48145 10.494C7.48145 7.99839 9.50442 5.97527 12.0002 5.97527C14.4959 5.97527 16.519 7.99839 16.519 10.494Z"
-              stroke="currentColor"
-              strokeWidth="1.6"
-              strokeMiterlimit={10}
-              strokeLinecap="round"
-              strokeLinejoin="round"
-            />
-            <path
-              d="M5.25977 21.0673C5.62117 17.6641 8.50079 15.013 11.9998 15.013C15.4988 15.013 18.3784 17.6643 18.7397 21.0674"
-              stroke="currentColor"
-              strokeWidth="1.6"
-              strokeMiterlimit={10}
-              strokeLinecap="round"
-              strokeLinejoin="round"
-            />
+          <g mask="url(#mask0_310_1575)">
+            <mask
+              id="mask1_310_1575"
+              style={{ maskType: "luminance" }}
+              maskUnits="userSpaceOnUse"
+              x={1}
+              y={1}
+              width={22}
+              height={22}
+            >
+              <path
+                d="M22.2999 22.3V1.70007H1.7V22.3H22.2999Z"
+                fill="white"
+                stroke="white"
+                strokeWidth="1.4"
+              />
+            </mask>
+            <g mask="url(#mask1_310_1575)">
+              <path
+                d="M7.41675 7.41667C7.41675 4.88536 9.46878 2.83334 12.0001 2.83334C14.5314 2.83334 16.5834 4.88536 16.5834 7.41667C16.5834 9.94797 14.5314 12 12.0001 12C9.46878 12 7.41675 9.94797 7.41675 7.41667Z"
+                stroke="#0F0F0F"
+                strokeWidth="1.6"
+                strokeMiterlimit={10}
+                strokeLinecap="round"
+                strokeLinejoin="round"
+              />
+              <path
+                d="M10.515 21.1667H4.42C3.41007 21.1667 2.66163 20.2566 2.86748 19.2889C3.75267 15.127 7.52112 12.0001 12.0357 12.0001C13.6861 12.0001 15.2367 12.4179 16.5832 13.1515"
+                stroke="#0F0F0F"
+                strokeWidth="1.6"
+                strokeMiterlimit={10}
+                strokeLinecap="round"
+                strokeLinejoin="round"
+              />
+              <path
+                d="M19.3333 13.8334L20.8135 15.2846C21.2834 15.7453 21.2844 16.4932 20.8159 16.9551L19.3333 18.4167"
+                stroke="#0F0F0F"
+                strokeWidth="1.6"
+                strokeMiterlimit={10}
+                strokeLinecap="round"
+                strokeLinejoin="round"
+              />
+              <path
+                d="M20.2501 16.5834H15.1915C13.9352 16.5834 12.9167 17.6094 12.9167 18.8751C12.9167 20.1408 13.9168 21.1667 15.1732 21.1667"
+                stroke="#0F0F0F"
+                strokeWidth="1.6"
+                strokeMiterlimit={10}
+                strokeLinecap="round"
+                strokeLinejoin="round"
+              />
+            </g>
           </g>
         </svg>
-      </span> <span>Profile</span> </div>
+
+
+      </span> <span>Refer</span> </div>
+      <Link to="/my-profile" className="nav-item"> <span>
+        <svg
+          width={24}
+          height={24}
+          viewBox="0 0 24 24"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <g clipPath="url(#clip0_310_1591)">
+            <mask
+              id="mask0_310_1591"
+              style={{ maskType: "luminance" }}
+              maskUnits="userSpaceOnUse"
+              x={0}
+              y={0}
+              width={24}
+              height={24}
+            >
+              <path d="M0 7.05719e-05H23.9999V24H0V7.05719e-05Z" fill="white" />
+            </mask>
+            <g mask="url(#mask0_310_1591)">
+              <path
+                d="M23.2968 12C23.2968 18.2391 18.239 23.2969 12 23.2969C5.76078 23.2969 0.703125 18.2391 0.703125 12C0.703125 5.76085 5.76078 0.703193 12 0.703193C18.239 0.703193 23.2968 5.76085 23.2968 12Z"
+                stroke="#0F0F0F"
+                strokeWidth="1.6"
+                strokeMiterlimit={10}
+                strokeLinecap="round"
+                strokeLinejoin="round"
+              />
+              <path
+                d="M16.519 10.494C16.519 12.9896 14.4959 15.0127 12.0002 15.0127C9.50442 15.0127 7.48145 12.9896 7.48145 10.494C7.48145 7.99839 9.50442 5.97527 12.0002 5.97527C14.4959 5.97527 16.519 7.99839 16.519 10.494Z"
+                stroke="#0F0F0F"
+                strokeWidth="1.6"
+                strokeMiterlimit={10}
+                strokeLinecap="round"
+                strokeLinejoin="round"
+              />
+              <path
+                d="M5.25977 21.0673C5.62117 17.6641 8.50079 15.013 11.9998 15.013C15.4988 15.013 18.3784 17.6643 18.7397 21.0674"
+                stroke="#0F0F0F"
+                strokeWidth="1.6"
+                strokeMiterlimit={10}
+                strokeLinecap="round"
+                strokeLinejoin="round"
+              />
+            </g>
+          </g>
+          <defs>
+            <clipPath id="clip0_310_1591">
+              <rect width={24} height={24} fill="white" />
+            </clipPath>
+          </defs>
+        </svg>
+
+      </span> <span>Profile</span> </Link>
     </div>
   )
 }

@@ -6,6 +6,10 @@ import Dashboard from './page/Dashboard'
 import GameList from './page/GameList'
 import GameDetails from './page/GameDetails'
 import MyProfile from './page/MyProfile'
+import ReferHistory from './page/ReferHistory'
+import WalletHistorys from './page/WalletHistorys'
+// import WalletHistory from './page/WalletHistory'
+import WithdrawalHistory from './page/WithdrawalHistory'
 import MyWallet from './page/MyWallet'
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './App.css';
@@ -20,6 +24,9 @@ const App = () => {
       <Route path="/game-detail" element={<GameDetails />} />
       <Route path="/my-profile" element={<MyProfile />} />
       <Route path="/my-wallet" element={<MyWallet />} />
+      <Route path="/wallet-history" element={<WalletHistorys/>} />
+      <Route path="/refer-history" element={<ReferHistory />} />
+      <Route path="/withdrawal-history" element={<WithdrawalHistory />} />
     </Routes>
   )
 }

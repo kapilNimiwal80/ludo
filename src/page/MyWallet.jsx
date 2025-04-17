@@ -1,5 +1,6 @@
 import React from 'react'
 import Layout from '../layouts'
+import { Link } from 'react-router-dom'
 
 const MyWallet = () => {
     return (
@@ -8,23 +9,16 @@ const MyWallet = () => {
                 <div className='wallet-mainBox'>
                     <div className='wallet-header'>
                         <div className='back-btn'>
-                            <a href="">
-                                <span className='back-icon'> <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                    <path fill-rule="evenodd" clip-rule="evenodd" d="M1 10.0025C1 9.66148 1.13545 9.33447 1.37656 9.09336C1.61767 8.85225 1.94469 8.7168 2.28567 8.7168H17.7137C18.0547 8.7168 18.3817 8.85225 18.6228 9.09336C18.8639 9.33447 18.9993 9.66148 18.9993 10.0025C18.9993 10.3434 18.8639 10.6705 18.6228 10.9116C18.3817 11.1527 18.0547 11.2881 17.7137 11.2881H2.28567C1.94469 11.2881 1.61767 11.1527 1.37656 10.9116C1.13545 10.6705 1 10.3434 1 10.0025Z" fill="black" />
-                                    <path fill-rule="evenodd" clip-rule="evenodd" d="M9.6227 17.3405C9.3816 17.5816 9.05464 17.717 8.71373 17.717C8.37282 17.717 8.04586 17.5816 7.80476 17.3405L1.37643 10.9122C1.1354 10.6711 1 10.3442 1 10.0032C1 9.66233 1.1354 9.33537 1.37643 9.09427L7.80476 2.66594C7.92336 2.54314 8.06523 2.4452 8.22209 2.37782C8.37894 2.31044 8.54765 2.27497 8.71836 2.27349C8.88907 2.272 9.05836 2.30453 9.21637 2.36918C9.37437 2.43382 9.51792 2.52929 9.63863 2.65C9.75935 2.77072 9.85481 2.91426 9.91946 3.07227C9.9841 3.23027 10.0166 3.39957 10.0151 3.57028C10.0137 3.74099 9.9782 3.90969 9.91082 4.06655C9.84344 4.22341 9.74549 4.36527 9.6227 4.48387L4.10333 10.0032L9.6227 15.5226C9.86372 15.7637 9.99912 16.0907 9.99912 16.4316C9.99912 16.7725 9.86372 17.0994 9.6227 17.3405Z" fill="black" />
-                                </svg>
-                                    <span className='back-text page-title'>  Back</span>
-                                </span>
-                            </a>
+                            
                         </div>
                         <div className='page-title'>
                             My Wallet
                         </div>
                         <div className='history-link'>
-                            <span className='page-title'></span>
+                            <Link to="/wallet-history" className='page-title'>History</Link>
                         </div>
                     </div>
-                    <div className="kyc-section">
+                    <div className="kyc-section Verified">
                         <div className="kyc-left">
                             <span className="kyc-card-label">Verification</span>
                             <span className="kyc-pending">
@@ -46,9 +40,9 @@ const MyWallet = () => {
                         <button className="btn theme-btn kyc-btn">Completed</button>
                     </div>
 
-                    <div className="kyc-section ChipsBox">
+                    <div className="kyc-section addAmount DepositChips">
                         <div className="kyc-left">
-                            <span className="kyc-card-label">Verification</span>
+
                             <span className="kyc-pending">
                                 <svg width="36" height="36" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
                                     <g clip-path="url(#clip0_1164_1550)">
@@ -60,10 +54,33 @@ const MyWallet = () => {
                                         </clipPath>
                                     </defs>
                                 </svg>
-                                <span class="profile-card-value"><span class="">Deposit Chips</span><span class=""></span></span>
+                                <span class="profile-card-value"><span class="">Deposit Chips</span><span class="">
+
+
+                                </span><span className="kyc-card-amount">₹ 3690</span></span>
                             </span>
                         </div>
                         <button className="btn theme-btn kyc-btn">ADD Amount</button>
+                        <p className='chips-info'>यह चिप्स Win अवं Buy की गई चिप्स है इनसे सिर्फ गेम खेले जा सकते है, बैंक या UPI से निकाला नहीं जा सकता है</p>
+                    </div>
+                    <div className="kyc-section addAmount WinningChips">
+                        <div className="kyc-left">
+                            <span className="kyc-card-label"></span>
+                            <span className="kyc-pending">
+                                <svg width="36" height="36" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <g clip-path="url(#clip0_262_85)">
+                                        <path d="M11.9994 11.9998C18.8671 11.9998 23.9988 9.28492 23.9988 6.85733C23.9988 4.42998 18.867 1.71494 11.9994 1.71494C5.13177 1.71494 0.000114298 4.42998 0.000114298 6.85733C0.000114298 9.28492 5.13166 11.9998 11.9994 11.9998ZM11.9994 32.5706C13.0018 32.5706 13.9666 32.5123 14.8843 32.4061C14.1048 31.4048 13.4679 30.3002 12.9917 29.1239C12.6624 29.135 12.332 29.1427 11.9993 29.1427C8.07507 29.1427 4.35877 28.3651 1.53526 26.9533C0.979309 26.6753 0.467709 26.3766 0.000114298 26.0605V27.4282C0.000114298 29.8555 5.13166 32.5706 11.9994 32.5706ZM11.9994 25.7137C12.0346 25.7137 12.0692 25.7131 12.1043 25.713C12.0331 25.1442 11.9974 24.5715 11.9973 23.9982C11.9973 23.4178 12.0339 22.8459 12.1043 22.2844C12.0692 22.2844 12.0345 22.2857 11.9994 22.2857C8.07518 22.2857 4.359 21.5081 1.53537 20.0963C0.979309 19.8183 0.467595 19.5197 0 19.2036V20.5712C0.000114298 22.9987 5.13166 25.7137 11.9994 25.7137ZM11.9994 18.8566C12.3395 18.8566 12.6751 18.8498 13.0065 18.8367C13.5352 17.5406 14.259 16.333 15.1527 15.2556C14.1055 15.371 13.0529 15.4288 11.9994 15.4288C8.07518 15.4288 4.359 14.6512 1.53537 13.2394C0.979309 12.9613 0.467595 12.6628 0 12.3466V13.7143C0.000114298 16.1418 5.13166 18.8566 11.9994 18.8566ZM17.1428 18.3156C16.3878 19.4494 15.8667 20.7225 15.6103 22.0603C15.4879 22.699 15.4263 23.3479 15.4264 23.9982C15.4264 24.4962 15.4627 24.9859 15.5314 25.4651C15.6969 26.6198 16.0592 27.7376 16.6024 28.7699C17.1603 29.8301 17.8981 30.7854 18.7828 31.5932C20.6125 33.2644 23.0459 34.2851 25.7133 34.2851C31.3854 34.2851 36.0001 29.6704 36.0001 23.9982C36.0001 18.3259 31.3854 13.7114 25.7133 13.7114C25.127 13.7114 24.5522 13.7614 23.9924 13.8561C21.1409 14.3383 18.6848 15.9978 17.1428 18.3156Z" fill="#FF5521" />
+                                    </g>
+                                    <defs>
+                                        <clipPath id="clip0_262_85">
+                                            <rect width="36" height="36" fill="white" />
+                                        </clipPath>
+                                    </defs>
+                                </svg>
+                                <span class="profile-card-value"><span class="">Deposit Chips</span><span class="kyc-card-amount">₹ 3000</span></span>
+                            </span>
+                        </div>
+                        <button className="btn theme-btn kyc-btn">Withdrawal</button>
                         <p className='chips-info'>यह चिप्स Win अवं Buy की गई चिप्स है इनसे सिर्फ गेम खेले जा सकते है, बैंक या UPI से निकाला नहीं जा सकता है</p>
                     </div>
 
