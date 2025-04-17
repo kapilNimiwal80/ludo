@@ -86,7 +86,7 @@
   }
 
   .BottomSection {
-    padding: 0 16px;
+    padding: 0 0;
   }
 
   .game-cards {
@@ -150,7 +150,7 @@
   .BottomSection {
     background: #fff;
     position: fixed;
-    bottom: 12px;
+    bottom: 0;
     width: 100%;
     padding-top: 12px;
   }
@@ -171,6 +171,30 @@
   .game-cards-inner {
     width: 100%;
   }
+  .kyc-section .kyc-btn {
+    max-width: 141px;
+}
+.profile-card-value>* {
+  font-size: 14px;
+}
+.kyc-card-amount {
+  font-size: 18px;
+}
+.wallet-header>*:nth-child(2) {
+  font-size: 18px;
+}
+.addAmount .chips-info {
+  text-align: center;
+}
+.card-label {
+  font-size: 14px;
+}
+.card-value {
+  font-size: 14px;
+}
+.page-title {
+  font-size: 20px;
+}
 }
 
 
