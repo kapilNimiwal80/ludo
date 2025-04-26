@@ -66,6 +66,9 @@
 
 
 @media (max-width: 575.98px) {
+  .store-buttons img {
+    height: 43px;
+}
   .left-panel::before {
     bottom: 20px;
     bottom: calc(20px + env(safe-area-inset-bottom));

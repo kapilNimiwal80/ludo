@@ -5,6 +5,7 @@
   padding: 48px 68px 0 !important;
   flex: 0 0 459px;
   text-align: center;
+  background: linear-gradient(183deg, rgba(118, 184, 42, .86) 0%, rgba(231, 35, 46, .86) 100%);
 }
 
 .board-img {
@@ -31,7 +32,7 @@ h3,
 h4,
 h5,
 h6 {
-   font-family: "Poetsen One", sans-serif;
+  font-family: "Poetsen One", sans-serif;
 }
 
 .right-panel {
@@ -89,7 +90,7 @@ h6 {
   border-radius: 40px;
   font-size: 16px;
   font-weight: 400;
-   font-family: "Poetsen One", sans-serif;
+  font-family: "Poetsen One", sans-serif;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -139,7 +140,7 @@ h6 {
   padding-left: 20px;
   position: relative;
   min-width: 80px;
-   font-family: "Poetsen One", sans-serif;
+  font-family: "Poetsen One", sans-serif;
 }
 
 .status-btn svg {
@@ -219,7 +220,7 @@ h6 {
 .nav-item {
   text-align: center;
   padding: 8px 28px;
-   font-family: "Poetsen One", sans-serif;
+  font-family: "Poetsen One", sans-serif;
   color: #000;
   font-size: 14px;
   font-weight: 400;
@@ -345,7 +346,7 @@ h6 {
   background: #fff;
   margin-bottom: 16px;
   border-radius: 30px;
-   font-family: "Poetsen One", sans-serif;
+  font-family: "Poetsen One", sans-serif;
 }
 
 .subCatgegory {
@@ -384,7 +385,7 @@ h6 {
   background: #FFEE41;
   border-radius: 40px;
   font-size: 16px;
-   font-family: "Poetsen One", sans-serif;
+  font-family: "Poetsen One", sans-serif;
 }
 
 .game-list-container {
@@ -408,7 +409,7 @@ h6 {
 
 .battle-text {
   font-size: 14px;
-   font-family: "Poetsen One", sans-serif;
+  font-family: "Poetsen One", sans-serif;
 }
 
 
@@ -451,17 +452,18 @@ h6 {
 .rules-link {
   font-size: 20px;
   color: #000;
-   font-family: "Poetsen One", sans-serif;
+  font-family: "Poetsen One", sans-serif;
 }
 
 .mian-content {
   height: calc(100dvh - 156px);
   overflow: auto;
   padding-bottom: 10px;
+  scrollbar-width: none;
 }
 
 .EntryAmount {
-   font-family: "Poetsen One", sans-serif;
+  font-family: "Poetsen One", sans-serif;
   color: #fff;
 }
 
@@ -508,7 +510,7 @@ h6 {
 }
 
 .back-link {
-   font-family: "Poetsen One", sans-serif;
+  font-family: "Poetsen One", sans-serif;
   font-size: 20px;
   display: flex;
   align-items: center;
@@ -566,7 +568,7 @@ h6 {
 
 .font-20 {
   font-size: 20px;
-   font-family: "Poetsen One", sans-serif;
+  font-family: "Poetsen One", sans-serif;
 }
 
 .rules-list {
@@ -626,7 +628,7 @@ h6 {
   border-radius: 0 30px 30px 0;
   right: 0;
   font-size: 16px;
-   font-family: "Poetsen One", sans-serif;
+  font-family: "Poetsen One", sans-serif;
 }
 
 .RemainingTime strong {
@@ -948,8 +950,7 @@ h6 {
 }
 
 .EntryAmount {
-  background: rgb(255, 29, 42);
-  background: linear-gradient(242deg, rgba(255, 29, 42, 1) 0%, rgba(255, 80, 90, 1) 100%);
+  background: none;
   padding: 8px;
   padding-left: 24px;
   border-radius: 30px;
@@ -963,6 +964,7 @@ h6 {
   padding-left: 65px;
   outline: 0;
   padding-right: 128px;
+  border: 1px solid #10101029;
 }
 
 .EntryAmountBox {
@@ -970,7 +972,12 @@ h6 {
 }
 
 .EntryAmount::placeholder {
-  color: #fff;
+  color: #000;
+}
+
+.battle-heading h2 {
+  font-size: 20px;
+  margin-bottom: 0;
 }
 
 .wallet-i {
@@ -1021,7 +1028,7 @@ h6 {
 
 .profile-card-value>* {
   display: block;
-   font-family: "Poetsen One", sans-serif;
+  font-family: "Poetsen One", sans-serif;
   font-size: 16px;
 }
 
@@ -1049,21 +1056,21 @@ h6 {
 
 .profile-details-card {
   border: 1px solid rgb(0 0 0 / 16%);
-  padding: 22px;
+  padding: 16px;
   border-radius: 22px;
   margin-bottom: 16px;
 }
 
 .card-label {
   font-size: 16px;
-   font-family: "Poetsen One", sans-serif;
+  font-family: "Poetsen One", sans-serif;
 }
 
 .info-row {
   display: flex;
   justify-content: space-between;
   gap: 15px;
-  margin-bottom: 15px;
+  margin-bottom: 10px;
 }
 
 .card-value {
@@ -1087,7 +1094,7 @@ h6 {
 
 .kyc-card-label {
   display: flex;
-   font-family: "Poetsen One", sans-serif;
+  font-family: "Poetsen One", sans-serif;
   margin-bottom: 4px;
 }
 
@@ -1111,6 +1118,9 @@ h6 {
   align-items: center;
   justify-content: center;
   border-radius: 50%;
+  position: fixed;
+  border-radius: 50%;
+  bottom: 70px;
 }
 
 .form-group {
@@ -1157,14 +1167,14 @@ h6 {
   text-align: center;
   font-size: 20px;
   color: #000;
-text-decoration: none;
+  text-decoration: none;
 }
 
 .wallet-header>* {
   flex: 0 0 calc(calc(100% / 3) - 10px);
   font-size: 22px;
   color: #000;
-   font-family: "Poetsen One", sans-serif;
+  font-family: "Poetsen One", sans-serif;
 }
 
 .wallet-header>*:last-child {
@@ -1211,13 +1221,13 @@ text-decoration: none;
 }
 
 .react-tabs__tab {
-  min-width: 116px;
+  min-width: 73px;
   text-align: center;
   margin-bottom: 1px;
   border: 1px solid #00000029 !important;
-  padding: 13px;
-  font-size: 16px;
-   font-family: "Poetsen One", sans-serif;
+  padding: 8px;
+  font-size: 13px;
+  font-family: "Poetsen One", sans-serif;
   border-radius: 28px;
   bottom: unset !important;
   outline: unset !important;
@@ -1225,7 +1235,7 @@ text-decoration: none;
 
 .react-tabs__tab-list {
   flex-wrap: nowrap !important;
-  gap: 16px;
+  gap: 12px;
   overflow-x: auto;
   display: flex;
   overflow: auto hidden;
@@ -1242,11 +1252,12 @@ text-decoration: none;
 
 .histoy-bottom {
   display: flex;
-  padding-top: 16px;
-  margin-top: 16px;
+  padding-top: 12px;
+  margin-top: 12px;
   border-top: 1px solid #00000029;
   justify-content: space-between;
   align-items: center;
+  font-size: 14px;
 }
 
 .chat-btn {
@@ -1259,19 +1270,123 @@ text-decoration: none;
   text-decoration: none;
   color: #000;
   font-size: 14px;
-   font-family: "Poetsen One", sans-serif;
+  font-family: "Poetsen One", sans-serif;
 }
 
 .chat-btn:hover {
   background: #48B6E1;
 }
 
-.bottom-nav > *{
+.bottom-nav>* {
   flex: 1 1 calc(100% / 4);
 }
-.bottom-nav > *:not(:last-child , .nav-item.active){
-border-right: 1px solid rgb(0 0 0 / 16%);
+
+.bottom-nav>*:not(:last-child, .nav-item.active) {
+  border-right: 1px solid rgb(0 0 0 / 16%);
 }
+
 .nav-item span {
   display: block;
+}
+
+.earn-status {
+  list-style: none;
+  padding: 00;
+  display: flex;
+  gap: 16px;
+  flex-direction: column;
+}
+
+.profile-card.copyCode {
+  background: #F5F5F5;
+}
+
+.profile-card.orText {
+  background: transparent;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  font-size: 24px;
+  font-weight: bold;
+  padding-block: 0;
+}
+.copyInput {
+  border: none;
+  background: transparent;
+  color: #000;
+  font-size: 20px;
+  font-weight: bold;
+  flex: 1 1 auto;
+  width: 100%;
+}
+.copy-btn {
+  background: #FFEE41;
+  border: 0;
+  flex: 1 1 180px;
+  padding: 12px 16px;
+  border-radius: 30px;
+  font-size: 16px;
+  font-family: "Poetsen One", sans-serif;
+}
+.profile-card.social-icon {
+  background: transparent;
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  padding-block: 0;
+}
+.social-btn {
+  width: 56px;
+  height: 56px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 12px;
+  background: #ddd;
+  padding: 0;
+}
+.how-it-work ul {
+  list-style: none;
+  padding: 0;
+  margin-bottom: 0;
+}
+
+.social-icon  .whatsapp-icon {
+  background: #1BD741;
+}
+.fb-icon {
+  background: #1976D2;
+}
+.x-icon {
+  background: #000000;
+}
+.clone-icon {
+  background: #6C757D;
+}
+
+.how-it-work {
+  padding-top: 26px;
+  margin-top: 26px;
+  border-top: 1px solid rgb(0 0 0 / 16%);
+}
+.copy-btn:hover {
+  background: #48B6E1;
+}
+
+.ReferAndEarn .profile-card-value>* {
+  font-size: 16px;
+}
+
+.profile-card.copyCode {
+  padding-block: 12px;
+}
+
+.Or-text {
+  font-size: 24px;
+  text-transform: uppercase;
+  font-weight: bold;
+}
+.HowWork {
+  margin-bottom: 16px;
+  font-size: 20px;
 }

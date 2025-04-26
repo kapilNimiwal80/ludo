@@ -7,7 +7,7 @@ const GameList = () => {
         <Layout>
             <div className="game-list-container">
                 <div className="EntryAmountBox">
-                    <input className='EntryAmount' placeholder='ENTRY AMOUNT' type="text" />
+                    <input className='EntryAmount' placeholder='Entry Amount' type="text" />
                     <img src="/wallet-icon.png" className='wallet-i' alt="" />
                     <button className="yellow-btn btn-lg">SET</button>
                 </div>

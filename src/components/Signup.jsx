@@ -37,7 +37,7 @@ const Signup = () => {
                         <button type="submit" className="btn theme-btn mt-26">Continue</button>
                     </form>
                     <div className="mt-4">
-                        <img src="/ludo-board2.jpg" alt="Ludo Board" className="board-img" />
+                        <img src="/ludo-board4.jpg" alt="Ludo Board" className="board-img" />
                     </div>
                 </div>
                 <div className="right-panel">

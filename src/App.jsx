@@ -7,7 +7,9 @@ import GameList from './page/GameList'
 import GameDetails from './page/GameDetails'
 import MyProfile from './page/MyProfile'
 import ReferHistory from './page/ReferHistory'
+import ReferEarn from './page/ReferEarn'
 import WalletHistorys from './page/WalletHistorys'
+import Withdrawal from './page/Withdrawal'
 // import WalletHistory from './page/WalletHistory'
 import WithdrawalHistory from './page/WithdrawalHistory'
 import MyWallet from './page/MyWallet'
@@ -26,6 +28,8 @@ const App = () => {
       <Route path="/my-wallet" element={<MyWallet />} />
       <Route path="/wallet-history" element={<WalletHistorys/>} />
       <Route path="/refer-history" element={<ReferHistory />} />
+      <Route path="/refer-earn" element={<ReferEarn />} />
+      <Route path="/withdrawal" element={<Withdrawal/>} />
       <Route path="/withdrawal-history" element={<WithdrawalHistory />} />
     </Routes>
   )
