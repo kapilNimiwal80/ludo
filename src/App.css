@@ -658,6 +658,7 @@ h6 {
   text-align: center;
   margin-bottom: 50px;
   border-radius: 22px;
+  cursor: pointer;
   flex-wrap: wrap;
 }
 
@@ -1493,15 +1494,51 @@ h6 {
   padding-left: 16px;
   margin: 0;
   margin-bottom: 0;
+  gap: 20px;
 }
 .input-field {
   border-radius: 27px;
   background: #F5F5F5;
   border: 0;
   padding: 22px;
+  border: 1px solid transparent;
+}
+.form-control:focus {
+  border: 1px solid #53b7ed;
 }
 .submit-button{
   border-radius: 30px;
   margin-top: 24px;
   font-weight: 600;
+}
+
+.card-details-box {
+  border: 1px solid #0000002b;
+  border-radius: 22px;
+  padding: 22px;
+  margin-top: 18px;
+}
+.card-details {
+  margin-top: 23px;
+}
+.card-details .upload-file-section {
+  min-height: 126px;
+  align-items: center;
+}
+.card-details .upload-file-button div {
+  font-size: 14px;
+  margin-top: 12px;
+}
+
+.kyc-text {
+  color: #272727d1;
+  font-size: 16px;
+}
+.card-details .form-control {
+  background: #F5F5F5;
+  border: transparent;
+}
+
+.bank-limit-list li {
+  font-size: 14px;
 }
