@@ -11,6 +11,7 @@ import ReferEarn from './page/ReferEarn'
 import WalletHistorys from './page/WalletHistorys'
 import Withdrawal from './page/Withdrawal'
 import Kyc from './page/Kyc'
+import AddAmount from './page/AddAmount'
 // import WalletHistory from './page/WalletHistory'
 import WithdrawalHistory from './page/WithdrawalHistory'
 import MyWallet from './page/MyWallet'
@@ -32,6 +33,7 @@ const App = () => {
       <Route path="/refer-earn" element={<ReferEarn />} />
       <Route path="/withdrawal" element={<Withdrawal/>} />
       <Route path="/kyc" element={<Kyc/>} />
+      <Route path="/add-amount" element={<AddAmount/>} />
       <Route path="/withdrawal-history" element={<WithdrawalHistory />} />
     </Routes>
   )

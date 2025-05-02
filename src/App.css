@@ -1542,3 +1542,35 @@ h6 {
 .bank-limit-list li {
   font-size: 14px;
 }
+
+.select-amount-item input{
+  display:none;
+}
+.select-amount-item label {
+  padding: 10px 20px;
+  border: 1px solid rgb(0 0 0 / 16%);
+  border-radius: 30px;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+}
+.select-amount-item input:checked + label{
+  background:#E7232E;
+  color:#fff;
+}
+.select-amount-box{
+  display:flex;
+  gap: 20px;
+}
+
+.add-amount-box .input-field.form-control {
+  padding: 20px;
+  height: 76px;
+  font-size: 20px;
+  border-radius: 22px;
+  font-weight: 600;
+}
+
+.wallet-header a {
+  text-decoration: none;
+}
