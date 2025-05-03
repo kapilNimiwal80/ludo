@@ -1,8 +1,7 @@
 import React from 'react'
 import Layout from '../layouts'
 
-
-const AddAmount = () => {
+const ManualPayment = () => {
     return (
         <>
             <Layout>
@@ -40,39 +39,30 @@ const AddAmount = () => {
                         </div>
                     </div>
                     <div className="alert-box">
-                        आप दो तरीकों से कॉइन जोड़ सकते हैं: 1. UPI बटनः एक बॉक्स आएगा, उस पर क्लिक करें और लोडर को चलने दें। यह आपको आपके पेमेंट प्लेटफॉर्म पर ले जाएगा। 2. मैनुअल पेमेंट: UPI आईडी या QR कोड पर पेमेंट करके, एडमिन को अनुरोध भेजें। जांच के बाद आपकी रिक्वेस्ट स्वीकार कर ली जाएगी, और 2 मिनट में आपके वॉलेट में कॉइन जुड़ जाएंगे। नोटः यदि आप गलत रिक्वेस्ट डालते हैं, तो आपको पेनल्टी का सामना करना पड़ेगा, इसलिए कृपया गलत अनुरोध न करें |</div>
-                    <div className="add-amount-box">
-                        <form action="">
-                            <div className='form-group'>
-                                <input type="number" placeholder="Enter Amount" className="input-field form-control" />
-                                <div className='minmax-amount'>
-                                    Min: ₹50, Max: ₹100000
-                                </div>
-                            </div>
-                            <div className='select-amount'>
-                                <div className='select-amount-box'>
-                                    <div className='select-amount-item'>
-                                        <input type="radio" name='select-amount' id='50rs' />
-                                        <label htmlFor="50rs"> ₹50</label>
-                                    </div>
-                                    <div className='select-amount-item'>
-                                        <input type="radio" name='select-amount' id='100rs' />
-                                        <label htmlFor="100rs"> ₹100</label>
-                                    </div>
-                                    <div className='select-amount-item'>
-                                        <input type="radio" name='select-amount' id='2000rs' />
-                                        <label htmlFor="2000rs"> ₹2000</label>
-                                    </div>
-                                </div>
-                            </div>
-                            <button className="submit-button theme-btn">Next</button>
-                        </form>
+                        आप दो तरीकों से कॉइन जोड़ सकते हैं: 1. UPI बटनः एक बॉक्स आएगा, उस पर क्लिक करें और लोडर को चलने दें। यह आपको आपके पेमेंट प्लेटफॉर्म पर ले जाएगा। 2. मैनुअल पेमेंट: UPI आईडी या QR कोड पर पेमेंट करके, एडमिन को अनुरोध भेजें। जांच के बाद आपकी रिक्वेस्ट स्वीकार कर ली जाएगी, और 2 मिनट में आपके वॉलेट में कॉइन जुड़ जाएंगे। नोटः यदि आप गलत रिक्वेस्ट डालते हैं, तो आपको पेनल्टी का सामना करना पड़ेगा, इसलिए कृपया गलत अनुरोध न करें |
+                    </div>
+                    <div className='added-amount-box'>
+                        <h3 className='added-amount'>
+                            Amount to be added ₹250
+                        </h3>
+                        <button className='theme-btn'> Edit</button>
+                    </div>
+                    <div className='upi-img'>
+                        <img src="/upi-img.png" alt="" />
+                    </div>  
+                    <div className='select-method'>
+                        <label htmlFor="">Manual Payment</label>
+                        <select name="" id="">
+                            <option defaultValue>Payment Method</option>
+                            <option value="">UPI</option>
+                            <option value="">ACCOUNT</option>
+                            <option value="">QR CODE</option>
+                        </select>
                     </div>
                 </div>
             </Layout>
-
         </>
     )
 }
 
-export default AddAmount
+export default ManualPayment

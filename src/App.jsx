@@ -10,8 +10,10 @@ import ReferHistory from './page/ReferHistory'
 import ReferEarn from './page/ReferEarn'
 import WalletHistorys from './page/WalletHistorys'
 import Withdrawal from './page/Withdrawal'
+import WithdrawalUi from './page/WithdrawalUi'
 import Kyc from './page/Kyc'
 import AddAmount from './page/AddAmount'
+import ManualPayment from './page/ManualPayment'
 // import WalletHistory from './page/WalletHistory'
 import WithdrawalHistory from './page/WithdrawalHistory'
 import MyWallet from './page/MyWallet'
@@ -32,8 +34,10 @@ const App = () => {
       <Route path="/refer-history" element={<ReferHistory />} />
       <Route path="/refer-earn" element={<ReferEarn />} />
       <Route path="/withdrawal" element={<Withdrawal/>} />
+      <Route path="/withdrawal-ui" element={<WithdrawalUi/>} />
       <Route path="/kyc" element={<Kyc/>} />
       <Route path="/add-amount" element={<AddAmount/>} />
+      <Route path="/manual-payment" element={<ManualPayment/>} />
       <Route path="/withdrawal-history" element={<WithdrawalHistory />} />
     </Routes>
   )

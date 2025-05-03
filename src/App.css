@@ -31,7 +31,7 @@ h2,
 h3,
 h4,
 h5,
-h6 {
+h6 ,button {
   font-family: "Poetsen One", sans-serif;
 }
 
@@ -1431,12 +1431,17 @@ h6 {
 
 .bank-transfer-box {
   display: flex;
-  align-items: center;
+  align-items: start;
   padding: 22px;
   border: 1px solid rgb(0 0 0 / 16%);
   border-radius: 8px;
   margin-bottom: 20px;
   border-radius: 22px;
+  cursor: pointer;
+}
+.bank-transfer-box.active{
+  background: #f9f6d3;
+  border: 1px solid #FFEE41;
 }
 
 .bank-icon {
@@ -1494,7 +1499,8 @@ h6 {
   padding-left: 16px;
   margin: 0;
   margin-bottom: 0;
-  gap: 20px;
+  gap: 4px 28px;
+  flex-wrap: wrap;
 }
 .input-field {
   border-radius: 27px;
@@ -1573,4 +1579,13 @@ h6 {
 
 .wallet-header a {
   text-decoration: none;
+}
+
+.added-amount {
+  font-size: 18px;
+}
+.added-amount-box {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
