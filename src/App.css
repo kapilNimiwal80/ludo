@@ -1,3 +1,8 @@
+html, body {
+  touch-action: manipulation;
+  overscroll-behavior: contain;
+}
+
 .left-panel {
   width: 460px;
   background-size: contain;
@@ -5,7 +10,6 @@
   padding: 48px 68px 0 !important;
   flex: 0 0 459px;
   text-align: center;
-  background: linear-gradient(183deg, rgba(118, 184, 42, .86) 0%, rgba(231, 35, 46, .86) 100%);
 }
 
 .board-img {
@@ -31,7 +35,8 @@ h2,
 h3,
 h4,
 h5,
-h6 ,button {
+h6,
+button {
   font-family: "Poetsen One", sans-serif;
 }
 
@@ -114,11 +119,13 @@ h6 ,button {
 
 .humburger-btn {
   border: 0;
+  margin-left: -16px;
+  margin-right: 10px;
   background: transparent;
 }
 
 .logo .dash-logo {
-  height: 54px;
+  height: 80px;
 }
 
 .topbar {
@@ -154,9 +161,10 @@ h6 ,button {
 
 .status-btn img {
   position: absolute;
-  left: -14px;
+  left: -16px;
   top: 50%;
   transform: translateY(-50%);
+  height: 40px;
 }
 
 .coin-btn {
@@ -164,7 +172,7 @@ h6 ,button {
 }
 
 .status-btn.coin-btn img {
-  left: -9px;
+  left: -15px;
 }
 
 .sidebar {
@@ -383,6 +391,7 @@ h6 ,button {
   padding: 14px 42px;
   border: 0;
   background: #FFEE41;
+  color: #000;
   border-radius: 40px;
   font-size: 16px;
   font-family: "Poetsen One", sans-serif;
@@ -464,7 +473,7 @@ h6 ,button {
 
 .EntryAmount {
   font-family: "Poetsen One", sans-serif;
-  color: #fff;
+  color: #000;
 }
 
 .EntryAmount span {
@@ -545,8 +554,23 @@ h6 ,button {
   border-radius: 12px;
   color: #fff;
   margin-top: 22px;
+  white-space: nowrap;
+  overflow: hidden;
+}
+.warning span {
+  animation: marquee 10s linear infinite;
+  white-space: nowrap;
+  width: 100%;
+  display: block;
+}
+.kyc-section .btn.theme-btn {
+  font-size: 14px;
 }
 
+@keyframes marquee {
+  0%   { transform: translateX(0); }
+  100% { transform: translateX(-100%); }
+}
 .play-instruction {
   text-align: center;
   padding-bottom: 22px;
@@ -623,6 +647,7 @@ h6 ,button {
   position: absolute;
   top: 0;
   height: 52px;
+  color: #000;
   border: 0;
   background: #FFEE41;
   border-radius: 0 30px 30px 0;
@@ -940,14 +965,19 @@ h6 ,button {
   justify-content: center;
 }
 
-
 .ResendOtp {
   display: block;
   margin-top: 10px;
   text-align: left;
   color: #000;
-  background: #48B6E1 !important;
+  background: transparent !important;
   margin-top: 16px;
+  text-align: right;
+  justify-content: end !important;
+  color: #fff;
+  padding-bottom: 0 !important;
+  height: 20px !important;
+  margin-top: 0;
 }
 
 .EntryAmount {
@@ -1169,6 +1199,7 @@ h6 ,button {
   font-size: 20px;
   color: #000;
   text-decoration: none;
+  white-space: nowrap;
 }
 
 .wallet-header>* {
@@ -1311,6 +1342,7 @@ h6 ,button {
   font-weight: bold;
   padding-block: 0;
 }
+
 .copyInput {
   border: none;
   background: transparent;
@@ -1320,15 +1352,18 @@ h6 ,button {
   flex: 1 1 auto;
   width: 100%;
 }
+
 .copy-btn {
   background: #FFEE41;
   border: 0;
   flex: 1 1 180px;
+  color: #000;
   padding: 12px 16px;
   border-radius: 30px;
   font-size: 16px;
   font-family: "Poetsen One", sans-serif;
 }
+
 .profile-card.social-icon {
   background: transparent;
   display: flex;
@@ -1336,6 +1371,7 @@ h6 ,button {
   gap: 30px;
   padding-block: 0;
 }
+
 .social-btn {
   width: 56px;
   height: 56px;
@@ -1346,21 +1382,25 @@ h6 ,button {
   background: #ddd;
   padding: 0;
 }
+
 .how-it-work ul {
   list-style: none;
   padding: 0;
   margin-bottom: 0;
 }
 
-.social-icon  .whatsapp-icon {
+.social-icon .whatsapp-icon {
   background: #1BD741;
 }
+
 .fb-icon {
   background: #1976D2;
 }
+
 .x-icon {
   background: #000000;
 }
+
 .clone-icon {
   background: #6C757D;
 }
@@ -1370,6 +1410,7 @@ h6 ,button {
   margin-top: 26px;
   border-top: 1px solid rgb(0 0 0 / 16%);
 }
+
 .copy-btn:hover {
   background: #48B6E1;
 }
@@ -1387,6 +1428,7 @@ h6 ,button {
   text-transform: uppercase;
   font-weight: bold;
 }
+
 .HowWork {
   margin-bottom: 16px;
   font-size: 20px;
@@ -1439,7 +1481,8 @@ h6 ,button {
   border-radius: 22px;
   cursor: pointer;
 }
-.bank-transfer-box.active{
+
+.bank-transfer-box.active {
   background: #f9f6d3;
   border: 1px solid #FFEE41;
 }
@@ -1485,6 +1528,7 @@ h6 ,button {
 .submit-button:hover {
   background-color: #f2c200;
 }
+
 .alert-box {
   color: white;
   padding: 12px 22px;
@@ -1494,6 +1538,7 @@ h6 ,button {
   text-align: center;
   background: linear-gradient(90deg, rgba(255, 29, 42, 1) 0%, rgba(255, 80, 90, 1) 100%);
 }
+
 .bank-limit-list {
   display: flex;
   padding-left: 16px;
@@ -1502,6 +1547,7 @@ h6 ,button {
   gap: 4px 28px;
   flex-wrap: wrap;
 }
+
 .input-field {
   border-radius: 27px;
   background: #F5F5F5;
@@ -1509,10 +1555,12 @@ h6 ,button {
   padding: 22px;
   border: 1px solid transparent;
 }
+
 .form-control:focus {
   border: 1px solid #53b7ed;
 }
-.submit-button{
+
+.submit-button {
   border-radius: 30px;
   margin-top: 24px;
   font-weight: 600;
@@ -1524,13 +1572,16 @@ h6 ,button {
   padding: 22px;
   margin-top: 18px;
 }
+
 .card-details {
   margin-top: 23px;
 }
+
 .card-details .upload-file-section {
   min-height: 126px;
   align-items: center;
 }
+
 .card-details .upload-file-button div {
   font-size: 14px;
   margin-top: 12px;
@@ -1540,6 +1591,7 @@ h6 ,button {
   color: #272727d1;
   font-size: 16px;
 }
+
 .card-details .form-control {
   background: #F5F5F5;
   border: transparent;
@@ -1549,9 +1601,10 @@ h6 ,button {
   font-size: 14px;
 }
 
-.select-amount-item input{
-  display:none;
+.select-amount-item input {
+  display: none;
 }
+
 .select-amount-item label {
   padding: 10px 20px;
   border: 1px solid rgb(0 0 0 / 16%);
@@ -1560,12 +1613,14 @@ h6 ,button {
   font-weight: 600;
   cursor: pointer;
 }
-.select-amount-item input:checked + label{
-  background:#E7232E;
-  color:#fff;
+
+.select-amount-item input:checked+label {
+  background: #E7232E;
+  color: #fff;
 }
-.select-amount-box{
-  display:flex;
+
+.select-amount-box {
+  display: flex;
   gap: 20px;
 }
 
@@ -1583,9 +1638,130 @@ h6 ,button {
 
 .added-amount {
   font-size: 18px;
+  margin-bottom: 0;
 }
+
 .added-amount-box {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  margin-bottom: 16px;
+}
+
+.editBtn {
+  background: #FFEE41;
+  border: 1px solid #FFEE41;
+  padding: 10px 40px;
+  border-radius: 27px;
+}
+
+.upi-img {
+  border-radius: 22px;
+  border: 1px solid #00000024;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  margin-bottom: 26px;
+}
+
+.upi-img img {
+  height: 80px;
+}
+
+.select-method label {
+  display: block;
+}
+
+.select-method select {
+  background-color: #F5F5F5;
+  padding: 16px 20px;
+  width: 100%;
+  border-radius: 20px;
+  border: 0;
+  font-size: 14px;
+  color: #9D7575;
+  --bs-form-select-bg-img: url('data:image/svg+xml,<svg width="14" height="8" viewBox="0 0 14 8" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M12.9192 0.179688H1.08239C0.122646 0.179688 -0.357224 1.33937 0.322592 2.01919L5.50119 7.19778C6.33096 8.02756 7.68059 8.02756 8.51037 7.19778L10.4798 5.22832L13.689 2.01919C14.3588 1.33937 13.8789 0.179688 12.9192 0.179688Z" fill="black"/></svg>');
+}
+
+/*  */
+
+
+.upi-container {
+  width: 100%;
+  margin: 10px auto 30px;
+  background: #F5F5F5;
+  padding: 20px;
+  border-radius: 16px;
+}
+
+.copy-btn-icon {
+  border: 0;
+}
+
+.copy-btn-icon svg {
+  height: 20px;
+}
+
+.upi-label {
+  font-weight: bold;
+  margin-bottom: 3px;
+}
+
+.upi-row {
+  display: flex;
+  align-items: center;
+  margin-bottom: 12px;
+  justify-content: space-between;
+}
+
+.upi-id {
+  color: #000;
+  font-weight: bold;
+  margin-right: 10px;
+  word-break: break-all;
+  font-size: 16px;
+}
+
+.qr-heading {
+  text-align: center;
+}
+
+.qr-heading {
+  text-align: center;
+}
+
+.Qr-container {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  text-align: center;
+  background: #F5F5F5;
+  padding: 16px;
+  border-radius: 16px;
+}
+
+.left-panel form img {
+  height: 80px;
+}
+
+.left-panel form .form-control {
+  height: 45px;
+}
+
+.form-info {
+  font-size: 14px;
+}
+
+.left-panel form .btn.theme-btn {
+  height: 45px;
+}
+
+.status-btn.coin-btn {
+  border: 2px solid #84D3FF;
+  background: #50B5ED;
+}
+
+.battle-text img {
+  height: 20px;
 }

@@ -66,6 +66,13 @@
 
 
 @media (max-width: 575.98px) {
+  .modal-body, .ReactModal__Content {
+    min-width: 90% !important;
+    margin-inline:16px ;
+}
+.modal-body, .ReactModal__Content {
+  padding: 26px 16px 45px !important;
+}
   .store-buttons img {
     height: 43px;
 }

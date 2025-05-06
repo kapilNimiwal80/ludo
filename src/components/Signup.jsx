@@ -35,6 +35,7 @@ const Signup = () => {
                         <input type="text" className="form-control mt-3" placeholder="Enter Code" />
                         <button type="submit" className="btn theme-btn ResendOtp mt-26">Resend otp</button>
                         <button type="submit" className="btn theme-btn mt-26">Continue</button>
+                        <p className="form-info mt-5">By continuing I agree that skilltox may store and process my data in accordance with the  <a href="">About Contact Privacy Policy </a> and that I am 18 years or older. I am not playing from Assam, Odisha, Nagaland, Sikkim, Meghalaya, Andhra Pradesh, or Telangana.</p>
                     </form>
                     <div className="mt-4">
                         <img src="/ludo-board4.jpg" alt="Ludo Board" className="board-img" />

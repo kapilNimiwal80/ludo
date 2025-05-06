@@ -36,7 +36,7 @@ const Topbar = () => {
         </span>
         <div className='statusBox ms-auto'>
           <button type='button' className='status-btn ms-auto'>
-            <img src="/diamond.png" alt="" />
+            <img src="/d1.png" alt="" />
             <span className='status-value'> 1250 </span>
             <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
               <rect x="0.489014" y="0.511488" width="22.977" height="22.977" rx="11.4885" fill="url(#paint0_linear_10_1563)" />
@@ -50,7 +50,7 @@ const Topbar = () => {
             </svg>
           </button>
           <button type='button' className='status-btn coin-btn'>
-            <img src="/coin.png" alt="" />
+            <img src="/coin 2.png" alt="" />
             <span className='status-value'> 1250 </span>
             <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
               <rect x="0.489014" y="0.511488" width="22.977" height="22.977" rx="11.4885" fill="url(#paint0_linear_10_1563)" />

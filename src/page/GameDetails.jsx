@@ -100,7 +100,7 @@ const GameDetails = () => {
                             Remaining Time: <strong>277 seconds</strong>
                         </div>
                         <div className="warning">
-                            मना किया जायेगा | इसलिए कृपया ऐसी गलती ना करें
+                            <span>मना किया जायेगा | इसलिए कृपया ऐसी गलती ना करें</span>
                         </div>
                     </div>
 

@@ -1,7 +1,26 @@
-import React from 'react'
+import React, { useState } from 'react'
 import Layout from '../layouts'
+import Modal from 'react-modal';
+
+Modal.setAppElement('#root');
 
 const ManualPayment = () => {
+    const [utr, setUtr] = useState('');
+    const upiId = '8740855331-3@ybl';
+    const [isOpen, setIsOpen] = useState(false);
+    const [previewImage, setPreviewImage] = useState(null);
+
+    const handleFileChange = (e) => {
+        const file = e.target.files[0];
+        if (file) {
+            const reader = new FileReader();
+            reader.onloadend = () => {
+                setPreviewImage(reader.result);
+            };
+            reader.readAsDataURL(file);
+        }
+    };
+
     return (
         <>
             <Layout>
@@ -45,21 +64,134 @@ const ManualPayment = () => {
                         <h3 className='added-amount'>
                             Amount to be added ₹250
                         </h3>
-                        <button className='theme-btn'> Edit</button>
+                        <button className='editBtn theme-btn'> Edit</button>
                     </div>
                     <div className='upi-img'>
                         <img src="/upi-img.png" alt="" />
-                    </div>  
+                    </div>
                     <div className='select-method'>
                         <label htmlFor="">Manual Payment</label>
-                        <select name="" id="">
+                        <select name="" className='form-select' id="">
                             <option defaultValue>Payment Method</option>
                             <option value="">UPI</option>
                             <option value="">ACCOUNT</option>
                             <option value="">QR CODE</option>
                         </select>
                     </div>
+                    <div className="upi-container">
+                        <p className="upi-label">Pay to UPI:</p>
+                        <div className="upi-row">
+                            <span className="upi-id">{upiId}</span>
+                            <button className="copy-btn-icon" >
+                                <svg width="28" height="28" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M24.7188 28H9.84375C8.03425 28 6.5625 26.5282 6.5625 24.7188V9.84375C6.5625 8.03425 8.03425 6.5625 9.84375 6.5625H24.7188C26.5282 6.5625 28 8.03425 28 9.84375V24.7188C28 26.5282 26.5282 28 24.7188 28ZM9.84375 8.75C9.24066 8.75 8.75 9.24066 8.75 9.84375V24.7188C8.75 25.3218 9.24066 25.8125 9.84375 25.8125H24.7188C25.3218 25.8125 25.8125 25.3218 25.8125 24.7188V9.84375C25.8125 9.24066 25.3218 8.75 24.7188 8.75H9.84375ZM4.375 19.25H3.28125C2.67816 19.25 2.1875 18.7593 2.1875 18.1562V3.28125C2.1875 2.67816 2.67816 2.1875 3.28125 2.1875H18.1562C18.7593 2.1875 19.25 2.67816 19.25 3.28125V4.32031H21.4375V3.28125C21.4375 1.47175 19.9657 0 18.1562 0H3.28125C1.47175 0 0 1.47175 0 3.28125V18.1562C0 19.9657 1.47175 21.4375 3.28125 21.4375H4.375V19.25Z" fill="#000" />
+                                </svg>
+                            </button>
+                        </div>
+                        <button onClick={() =>setIsOpen(true)} className="editBtn theme-btn w-100" >Upload </button>
+                    </div>
+                    <div className="upi-container mt-0">
+                        <p className="upi-label">Account Number</p>
+                        <div className="upi-row">
+                            <span className="upi-id">
+                                45883597842
+                            </span>
+                            <button className="copy-btn-icon" >
+                                <svg width="28" height="28" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M24.7188 28H9.84375C8.03425 28 6.5625 26.5282 6.5625 24.7188V9.84375C6.5625 8.03425 8.03425 6.5625 9.84375 6.5625H24.7188C26.5282 6.5625 28 8.03425 28 9.84375V24.7188C28 26.5282 26.5282 28 24.7188 28ZM9.84375 8.75C9.24066 8.75 8.75 9.24066 8.75 9.84375V24.7188C8.75 25.3218 9.24066 25.8125 9.84375 25.8125H24.7188C25.3218 25.8125 25.8125 25.3218 25.8125 24.7188V9.84375C25.8125 9.24066 25.3218 8.75 24.7188 8.75H9.84375ZM4.375 19.25H3.28125C2.67816 19.25 2.1875 18.7593 2.1875 18.1562V3.28125C2.1875 2.67816 2.67816 2.1875 3.28125 2.1875H18.1562C18.7593 2.1875 19.25 2.67816 19.25 3.28125V4.32031H21.4375V3.28125C21.4375 1.47175 19.9657 0 18.1562 0H3.28125C1.47175 0 0 1.47175 0 3.28125V18.1562C0 19.9657 1.47175 21.4375 3.28125 21.4375H4.375V19.25Z" fill="#000" />
+                                </svg>
+                            </button>
+                        </div>
+                        <p className="upi-label">Beneficiary Name
+                        </p>
+                        <div className="upi-row">
+                            <span className="upi-id">Dinesh Yadav</span>
+                            <button className="copy-btn-icon" >
+                                <svg width="28" height="28" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M24.7188 28H9.84375C8.03425 28 6.5625 26.5282 6.5625 24.7188V9.84375C6.5625 8.03425 8.03425 6.5625 9.84375 6.5625H24.7188C26.5282 6.5625 28 8.03425 28 9.84375V24.7188C28 26.5282 26.5282 28 24.7188 28ZM9.84375 8.75C9.24066 8.75 8.75 9.24066 8.75 9.84375V24.7188C8.75 25.3218 9.24066 25.8125 9.84375 25.8125H24.7188C25.3218 25.8125 25.8125 25.3218 25.8125 24.7188V9.84375C25.8125 9.24066 25.3218 8.75 24.7188 8.75H9.84375ZM4.375 19.25H3.28125C2.67816 19.25 2.1875 18.7593 2.1875 18.1562V3.28125C2.1875 2.67816 2.67816 2.1875 3.28125 2.1875H18.1562C18.7593 2.1875 19.25 2.67816 19.25 3.28125V4.32031H21.4375V3.28125C21.4375 1.47175 19.9657 0 18.1562 0H3.28125C1.47175 0 0 1.47175 0 3.28125V18.1562C0 19.9657 1.47175 21.4375 3.28125 21.4375H4.375V19.25Z" fill="#000" />
+                                </svg>
+                            </button>
+                        </div>
+                        <p className="upi-label">IFSC Code</p>
+                        <div className="upi-row">
+                            <span className="upi-id">KKFCCGG60</span>
+                            <button className="copy-btn-icon" >
+                                <svg width="28" height="28" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M24.7188 28H9.84375C8.03425 28 6.5625 26.5282 6.5625 24.7188V9.84375C6.5625 8.03425 8.03425 6.5625 9.84375 6.5625H24.7188C26.5282 6.5625 28 8.03425 28 9.84375V24.7188C28 26.5282 26.5282 28 24.7188 28ZM9.84375 8.75C9.24066 8.75 8.75 9.24066 8.75 9.84375V24.7188C8.75 25.3218 9.24066 25.8125 9.84375 25.8125H24.7188C25.3218 25.8125 25.8125 25.3218 25.8125 24.7188V9.84375C25.8125 9.24066 25.3218 8.75 24.7188 8.75H9.84375ZM4.375 19.25H3.28125C2.67816 19.25 2.1875 18.7593 2.1875 18.1562V3.28125C2.1875 2.67816 2.67816 2.1875 3.28125 2.1875H18.1562C18.7593 2.1875 19.25 2.67816 19.25 3.28125V4.32031H21.4375V3.28125C21.4375 1.47175 19.9657 0 18.1562 0H3.28125C1.47175 0 0 1.47175 0 3.28125V18.1562C0 19.9657 1.47175 21.4375 3.28125 21.4375H4.375V19.25Z" fill="#000" />
+                                </svg>
+                            </button>
+                        </div>
+                        <button className="editBtn theme-btn w-100" >Upload</button>
+                    </div>
+                    <div className="Qr-container">
+                        <h5 className='qr-heading'>Pay With QR Code </h5>
+                        <div className='Qr-code'>
+                            <img src="/qr-img.png" alt="" />
+                        </div>
+                        <button onClick={() =>setIsOpen(true)} className="editBtn theme-btn w-100" >Upload</button>
+                    </div>
                 </div>
+
+                <Modal
+                    isOpen={isOpen}
+                    onRequestClose={() => setIsOpen(true)}
+                    style={{
+                        content: {
+                            maxWidth: '400px',
+                            minWidth: '388px',
+                            margin: 'auto',
+                            padding: '20px',
+                            borderRadius: '22px',
+                            inset: '50% auto auto 50%',
+                            transform: 'translate(-50%, -50%)',
+                        },
+                    }}
+                >
+                    <button onClick={() =>
+
+
+                        setIsOpen(false)} className='btn-close modal-close-btn' >X</button>
+
+                    <h4 className="font-26">Payment Details</h4>
+                    <form action="">
+                        <div className='form-group'>
+                            <input type="text" placeholder='UTR Number' className='form-control' />
+                        </div>
+                        <div className='form-group'>
+                                <div className="upload-file-section mb-0">
+                                    <label className="upload-file-button">
+                                        <div>
+                                            <svg width="33" height="24" viewBox="0 0 33 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                <path d="M25.5037 23.6414H18.6381V16.704H20.907C21.4824 16.704 21.8224 16.0501 21.4824 15.5793L17.0689 9.47226C16.7877 9.07994 16.2058 9.07994 15.9246 9.47226L11.511 15.5793C11.171 16.0501 11.5045 16.704 12.0864 16.704H14.3553V23.6414H6.66592C3.23314 23.4518 0.5 20.2414 0.5 16.7628C0.5 14.3631 1.80119 12.2708 3.73008 11.1396C3.55353 10.6623 3.46199 10.1523 3.46199 9.61611C3.46199 7.16412 5.4432 5.18292 7.89518 5.18292C8.42481 5.18292 8.93482 5.27446 9.41214 5.45101C10.831 2.44324 13.8911 0.357422 17.4481 0.357422C22.0513 0.36396 25.8437 3.88828 26.2752 8.38031C29.8126 8.9884 32.5 12.2642 32.5 15.9716C32.5 19.934 29.4138 23.3668 25.5037 23.6414Z" fill="black" />
+                                            </svg>
+
+                                        </div>
+                                        <div> Upload File   </div>
+
+                                        <input
+                                            type="file"
+                                            accept="image/*"  // Only accept image files
+                                            onChange={handleFileChange}
+                                            style={{ display: 'none' }}
+                                        />
+                                    </label>
+                                    {previewImage && (
+                                        <div className="image-preview">
+                                            <img
+                                                src={previewImage}
+                                                alt="Preview"
+                                                className="preview-image"
+                                            />
+                                        </div>
+                                    )}
+                                </div>
+                            </div> 
+                        <button type='submit' className='btn theme-btn save-changes'> Submit </button>
+                    </form>
+
+
+                </Modal>
+
             </Layout>
         </>
     )
