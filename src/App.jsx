@@ -14,6 +14,8 @@ import WithdrawalUi from './page/WithdrawalUi'
 import Kyc from './page/Kyc'
 import AddAmount from './page/AddAmount'
 import ManualPayment from './page/ManualPayment'
+import Referal from './page/Referal'
+import PrivacyPolicy from './page/PrivacyPolicy'
 // import WalletHistory from './page/WalletHistory'
 import WithdrawalHistory from './page/WithdrawalHistory'
 import MyWallet from './page/MyWallet'
@@ -38,6 +40,8 @@ const App = () => {
       <Route path="/kyc" element={<Kyc/>} />
       <Route path="/add-amount" element={<AddAmount/>} />
       <Route path="/manual-payment" element={<ManualPayment/>} />
+      <Route path="/referal" element={<Referal/>} />
+      <Route path="/privacy-policy" element={<PrivacyPolicy/>} />
       <Route path="/withdrawal-history" element={<WithdrawalHistory />} />
     </Routes>
   )
